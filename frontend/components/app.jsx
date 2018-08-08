@@ -15,7 +15,6 @@ import {AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1 className='instapic-text'>InstaPic</h1>
       <GreetingContainer />
     </header>
     <Switch>
