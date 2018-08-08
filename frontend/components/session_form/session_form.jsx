@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 class SessionForm extends React.Component {
@@ -9,8 +9,22 @@ class SessionForm extends React.Component {
       username:"",
       password:""
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+ signup(){
+  if ( this.props.formType === 'signup' ){
+     return  (
+       <div>
+         <label>Email:
+         </label>
+         <input type="text"></input>
+       </div>
+     );
+   }
+ }
+
   update(field) {
     return e => this.setState({
       [field]: e.target.value,
@@ -41,7 +55,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           Welcome to InstaPic!
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          Please {this.props.formType} or <Link to={this.props.navLink}>{this.props.navLink}</Link>
           {this.renderErrors()}
           <div className='login-form'>
             <br/>
@@ -60,6 +74,7 @@ class SessionForm extends React.Component {
                 className='login-input'
                 />
             </label>
+            {this.signup()}
             <br/>
             <input className='session-submit' type='submit'
               value={this.props.formType} />
@@ -70,4 +85,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
