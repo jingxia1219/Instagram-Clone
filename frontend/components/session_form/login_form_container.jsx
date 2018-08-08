@@ -3,12 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {login} from '../../actions/session_actions';
 import SessionForm from './session_form';
-const mapStateToProps = ({errors}) => {
+const mapStateToProps = (state) => {
   return {
-    errors: errors.session,
+    errors: state.errors.session,
     formType: 'login',
-    navLink: <Link to="/signup">Sign up instead</Link>
-};
+    navLink: <Link to="/signup">Sign up</Link>
+ };
 };
 
 const mapDispatchToProps = dispatch => {

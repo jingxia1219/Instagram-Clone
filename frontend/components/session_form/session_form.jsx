@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import merge from 'lodash/merge'
+import merge from 'lodash/merge';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -12,8 +13,9 @@ class SessionForm extends React.Component {
   }
   update(field) {
     return e => this.setState({
-      [field]: e.target.value
+      [field]: e.target.value,
     });
+
   }
 
   handleSubmit(e) {
@@ -22,5 +24,50 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
-  renderErrors(){}
+  renderErrors(){
+    return (<ul>
+      {this.props.errors.map( (error,i ) =>
+        <li key={`${i}`}>
+          {error}
+        </li>
+      )}
+    </ul>
+  );
+  }
+
+  render(){
+    return (
+      <div className='login-form-container'>
+        <form onSubmit={this.handleSubmit} className='login-form-box'>
+          Welcome to InstaPic!
+          <br/>
+          Please {this.props.formType} or {this.props.navLink}
+          {this.renderErrors()}
+          <div className='login-form'>
+            <br/>
+            <label>Username:
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+                />
+            </label>
+            <br />
+            <label>Password:
+              <input type='password'
+                value={this.state.password}
+                onChange={this.update('password')}
+                className='login-input'
+                />
+            </label>
+            <br/>
+            <input className='session-submit' type='submit'
+              value={this.props.formType} />
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
+
+export default SessionForm;
