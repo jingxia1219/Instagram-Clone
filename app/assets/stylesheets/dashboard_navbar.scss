@@ -1,0 +1,56 @@
+.dashboard-navbar {
+  margin-left: 50px;
+  text-align: justify;
+  border-bottom: 1px solid #E9E8E8;
+}
+
+
+
+.insta-logo, .instapic-small, .search-box,.search-img, .empty-heart {
+  height: 30px;
+  margin-top: 22px;
+  margin-bottom: 19px;
+  text-align: center;
+}
+
+.empty-heart {
+  position: absolute;
+  margin-left: 700px;
+  height: 30px;
+}
+
+
+.insta-logo{
+  margin-right: 0px;
+  padding-right: 25px;
+  border-right: 1px solid grey;
+}
+
+input[type=text].search-box, .search-img {
+  position: absolute;
+  font-size: 13px;
+  align: center;
+  margin-left: 250px;
+  height: 24px;
+  align-self: center;
+  z-index: 1;
+}
+input[type=text].search-box {
+  width: 240px;
+}
+.search-img {
+  z-index: 2;
+  height: 35px;
+  margin-top: 19px;
+  margin-left: 320px;
+  opacity: 0.8;
+}
+
+.instapic-small{
+  margin-left: 20px;
+}
+
+.header-group {
+  background-color: white;
+  margin: 0;
+}
