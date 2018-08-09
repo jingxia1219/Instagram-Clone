@@ -17,7 +17,7 @@ body{
 }
 .iphone-screen {
   position: absolute;
-  margin-left: 100px;
+  margin-left: 190px;
   margin-right: 20px;
   width: 440px;
   margin-top: 40px;
@@ -35,7 +35,7 @@ body{
 
 .login-form-container {
   position: absolute;
-  margin-left: 40%;
+  margin-left: 500px;
   margin-right: 40%;
   padding-bottom: 58px;
   padding-top: 40px;
@@ -58,8 +58,13 @@ body{
 
 .intro-signup {
   position: absolute;
-  margin-left: 550px;
+  margin-left: 650px;
   padding-bottom: 50px;
+}
+
+button {
+  font-size: 27px;
+  background-color: lightblue;
 }
 
 .pic-one {
@@ -68,6 +73,6 @@ body{
   height: 421px;
   z-index: 3;
   opacity: 0.95;
-  margin-left: 243px;
+  margin-left: 333px;
   margin-top: 133px;
 }
