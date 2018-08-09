@@ -6,16 +6,29 @@
 
 
 
-.insta-logo, .instapic-small, .search-box,.search-img, .empty-heart {
+.insta-logo, .instapic-small, .search-box,.search-img,
+.empty-heart, .user-icon, .compass{
   height: 30px;
   margin-top: 22px;
   margin-bottom: 19px;
   text-align: center;
 }
 
+.compass {
+  position: absolute;
+  height: 31px;
+  margin-left: 750px;
+}
+
+.user-icon {
+  position: absolute;
+  margin-left: 850px;
+  height: 28px;
+}
+
 .empty-heart {
   position: absolute;
-  margin-left: 700px;
+  margin-left: 800px;
   height: 30px;
 }
 
