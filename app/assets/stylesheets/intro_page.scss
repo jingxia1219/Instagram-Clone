@@ -16,26 +16,58 @@ body{
 
 }
 .iphone-screen {
+  position: absolute;
   margin-left: 100px;
   margin-right: 20px;
   width: 440px;
   margin-top: 40px;
-}
-
-.login-signup {
-  padding-top: 20px;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  border: 1px solid lightgrey;
-  width: 350px;
-  text-align: center;
+  z-index: 2;
 }
 .instapic-text{
   height: 65px;
 }
 .intro-container{
-  display: flex;
+  display: flex ;
 }
 .login-button {
   background: navy;
+}
+
+.login-form-container {
+  position: absolute;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding-bottom: 58px;
+  padding-top: 40px;
+}
+
+body{
+  background-color: #FBFBFB;
+  z-index: 1;
+}
+
+ .login-form-container, .intro-signup {
+  padding-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  width: 350px;
+  text-align: center;
+}
+
+.intro-signup {
+  position: absolute;
+  margin-left: 550px;
+  padding-bottom: 50px;
+}
+
+.pic-one {
+  position: absolute;
+  width: 239px;
+  height: 421px;
+  z-index: 3;
+  opacity: 0.95;
+  margin-left: 243px;
+  margin-top: 133px;
 }

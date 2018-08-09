@@ -1,18 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SignupFormContainer from '.././session_form/login_container';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = ()=> (
       <div className='intro-container'>
       <img className='iphone-screen' src='https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png'/>
-      <nav className="login-signup">
-        <img className='instapic-text' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671' alt='insta_pic'/>
-      <h2 className="header-name">Sign up to see photos and<br/>
-      videos from your friends </h2>
-    <Link to='/login'>Login</Link>
-      <br/>
-      <Link to="/signup">Sign up!</Link>
-    </nav>
+      <img className='pic-one' src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38774870_1770092733085933_601809438831017984_n.jpg?_nc_cat=0&oh=5a55211a4ea9706e80976e81e66dc2c6&oe=5BC8CD24"/>
+      <SignupFormContainer />
     </div>
   );
   const personalGreeting = () => (

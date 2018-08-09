@@ -7,9 +7,9 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username:"",
-      password:"",
-      email: "",
+      username:"Phone number, username, or email",
+      password:"Password",
+      email: "Email",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
   render(){
     const signupEmail = this.signup();
     return (
-      <div className='login-form-container'>
+      <div className='intro-signup'>
         <img className='instapic-text' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671' alt='insta_pic'/>
         <form onSubmit={this.handleSubmit} className='login-form-box'>
 
