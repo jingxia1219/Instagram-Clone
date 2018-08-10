@@ -18,12 +18,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   update(field) {
     return e => this.setState({
       [field]: e.target.value,
     });
-
   }
 
   handleSubmit(e) {
@@ -31,6 +29,11 @@ class SessionForm extends React.Component {
     const user = merge( {}, this.state);
     this.props.processForm(user);
   }
+
+demo(e) {
+  e.preventDefault();
+  this.props.demoLogin({username:"jingx", password:"123456"})
+}
 
   renderErrors(){
     return (<ul>
@@ -60,6 +63,7 @@ class SessionForm extends React.Component {
   render(){
     const signupEmail = this.signup();
     return (
+      <div>
       <div className='login-form-container'>
         <img className='instapic-text' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671' alt='insta_pic'/>
         <form onSubmit={this.handleSubmit} className='login-form-box'>
@@ -67,7 +71,7 @@ class SessionForm extends React.Component {
           <br/>
           <h2 className="header-name">Welcome to InstaPic! <br/>to see photos and videos, <br/>
           Please {this.props.formType} or   </h2>
-        <Link className="signin-link" to={this.props.navLink}>{this.props.navLink}</Link>
+        <button className='demo-user' onClick={this.demo.bind(this)}>DEMO LOGIN</button>
           {this.renderErrors()}
           <div className='login-form'>
             <br/>
@@ -90,6 +94,10 @@ class SessionForm extends React.Component {
               value={this.props.formType} />
           </div>
         </form>
+        <p className='or-dash'></p>
+        <Link className="signin-link"  to={this.props.navLink}>{this.props.navLink}</Link>
+      </div>
+
       </div>
     );
   }

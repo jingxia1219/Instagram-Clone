@@ -56,15 +56,20 @@ class SessionForm extends React.Component {
     }
   }
 
+  demo(e){
+    e.preventDefault();
+    this.props.demoLogin({username:"jingx", password:"123456"});
+    }
   render(){
     const signupEmail = this.signup();
     return (
+      <div>
       <div className='intro-signup'>
         <img className='instapic-text' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671' alt='insta_pic'/>
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           <br/>
-          <h2 className="header-name">Welcome to InstaPic! <br/>to see photos and videos,
-          <br/> Please {this.props.formType} <br/> or </h2> <Link className="signin-link"  to={this.props.navLink}>{this.props.navLink}</Link>
+          <h2 className="header-name">Sign up to see photos and videos  <br/>from your friends.</h2>
+          <button className='demo-user-intro' onClick={this.demo.bind(this)}>DEMO LOGIN</button>
           {this.renderErrors()}
           <div className='login-form'>
             <br/>
@@ -87,6 +92,9 @@ class SessionForm extends React.Component {
               value={this.props.formType} />
           </div>
         </form>
+      </div>
+
+      <span className='seperate-box'>Have an account?<br/><Link className="signin-link1"  to={this.props.navLink}>{this.props.navLink}</Link></span>
       </div>
     );
   }
