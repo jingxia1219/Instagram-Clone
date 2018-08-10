@@ -53,8 +53,8 @@ body{
 }
 
  .login-form-container, .intro-signup, {
-  padding-top: 20px;
-  margin-top: 42px;
+  padding-top: 40px;
+  margin-top: 60px;
   border: 1px solid lightgrey;
   background-color: white;
   width: 350px;
@@ -63,11 +63,11 @@ body{
 
 .intro-signup,.seperate-box, .seperate-box-2  {
   position: absolute;
-  margin-left: 650px;
+  margin-left: 620px;
   padding-bottom: 38px;
 }
 .seperate-box {
-  margin-top: 510px;
+  margin-top: 520px;
   border: 1px solid lightgrey;
   background: white;
   width: 350px;
@@ -77,6 +77,9 @@ body{
   text-align: center;
 }
 
+.session-submit {
+  font-family: sans-serif;
+}
 
 input[type=text], input[type=password] {
   background-color: #FBFBFB;
@@ -111,7 +114,7 @@ input[type=submit],  .demo-user, .demo-user-intro {
 
 .login-input {
   margin-top: 2px;
-  color: #D3D3D3; 
+  color: #D3D3D3;
 }
 
 .signin-link, .signin-link1 {
