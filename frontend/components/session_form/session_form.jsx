@@ -71,7 +71,7 @@ demo(e) {
           <br/>
           <h2 className="header-name">Welcome to InstaPic! <br/>to see photos and videos, <br/>
           Please {this.props.formType} or   </h2>
-        <button className='demo-user' onClick={this.demo.bind(this)}>DEMO LOGIN</button>
+        <button className='demo-user' onClick={this.demo.bind(this)}>Demo Login</button>
           {this.renderErrors()}
           <div className='login-form'>
             <br/>
@@ -93,8 +93,8 @@ demo(e) {
             <input className='session-submit' type='submit'
               value={this.props.formType} />
           </div>
-        </form>
-        <p className='or-dash'></p>
+        </form><br/>
+        <p className='or-dash'>or</p>
         <Link className="signin-link"  to={this.props.navLink}>{this.props.navLink}</Link>
       </div>
 
