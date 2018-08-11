@@ -1,20 +1,22 @@
 class Api::PostsController < ApplicationController
   def index
-    if params[:author_id]
-      @posts = Post.where(author_id: params[:author_id])
-      render :index
-    else
-      @posts = Post.all
-      render :index
-    end
+    # if params[:author_id]
+    #   @posts = Post.where(author_id: params[:author_id])
+    #   render :index
+    # else
+    #   @posts = Post.all
+    #   render :index
+    # end
+    @posts = Post.all
   end
 
   def show
     @post = Post.find(params[:id])
     if @post
-      render: index
+      render :index
     else
-      render json:'Post not found'!, status: 404
+      render json:'Post not found!', status: 404
+    end
   end
 
   def new

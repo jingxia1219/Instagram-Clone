@@ -1,4 +1,5 @@
 import React from 'react';
+import PostIndexContainer from '../posts/post_index_container';
 
 const personalGreeting = ({currentUser, logout}) => {
   return (
@@ -14,7 +15,6 @@ const personalGreeting = ({currentUser, logout}) => {
       <img onClick={logout} className='compass' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
     </div>
   </hgroup>
-
   <h1>
   dsafsdafsdfsadfsdaf</h1>
   <h1>
@@ -25,6 +25,7 @@ const personalGreeting = ({currentUser, logout}) => {
   dsafsdafsdfsadfsdaf</h1>
   <h1>
   dsafsdafsdfsadfsdaf</h1>
+<PostIndexContainer />
   <h1>
   dsafsdafsdfsadfsdaf</h1>
   <h1>

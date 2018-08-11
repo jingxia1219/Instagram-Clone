@@ -11,3 +11,17 @@ export const fetchPost = (id) => (
     url: `/api/posts/${id}`
   })
 );
+export const createPost = post => (
+  $.ajax({
+    method: 'post',
+    url: "/api/post",
+    data: { post }
+  })
+);
+
+export const deletePost = (id) => (
+  $.ajax({
+    method: 'destroy',
+    url: `/api/posts/${id}`
+  })
+);

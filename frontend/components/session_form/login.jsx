@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
               value={this.props.formType} />
             <br/>
             <p className='copy-right'>By signing up, you agree to our
-            <p className='copy-right-bold'>Terms, Data Policy and Cookies Policy.</p>
+            <p className='copy-right-bold'>Terms, Data Policy and Cookies <br/> Policy.</p>
           </p>
           </div>
         </form>
