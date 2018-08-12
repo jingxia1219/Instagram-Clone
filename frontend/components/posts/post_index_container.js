@@ -3,8 +3,9 @@ import { logout } from  '../../actions/session_actions';
 import {fetchPost, deletePost, fetchPosts, createPost} from '../../actions/posts/post_actions';
 import PostIndex from './post_index';
 
-const mapStateToProps = (state) => ({
-  posts: state.entities.posts
+const mapStateToProps = ({entities}) => ({
+  posts: Object.values(entities.posts),
+  photoUrl: null
 });
 
 const mapDispatchToProps = (dispatch) => ({

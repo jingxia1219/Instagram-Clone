@@ -3,22 +3,42 @@ import React from 'react';
 class PostIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
+    this.state = {
       posts: [],
     };
+    // this.fetchPosts = this.fetchPosts.bind(this);
   }
+  //
+  // fetchPosts() {
+  //   $.ajax({
+  //     url: "/api/posts"
+  //   }).then(posts => {
+  //     this.setState({posts});
+  //   });
+  // }
   componentDidMount(){
     this.props.fetchPosts();
+    // this.fetchPosts();
   }
 
   render() {
     // if (!this.props.posts) return null;
-    console.log("console.log(post):",this.props.posts);
-    const posts = this.state.posts.map( post=> <li>{post.description}</li>);
+    console.log("console.log(post): ABLE TO GET POSTS?",this.props.posts);
+
+      const posts = this.props.posts.map( post=> {
+        return (
+        <li key={post.id}>
+          {post.description}
+          <img src={post.photoUrl}/>
+        </li>
+
+        );
+      });
     return (
       <div>
-        <h2>Next line is RENDERING posts</h2>
-        {posts}
+        <ul>
+          {posts}
+        </ul>
       </div>
     );
 

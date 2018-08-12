@@ -10,12 +10,14 @@ class CreatePost extends React.Component {
       photoUrl: null,
       photoFile: null
     }};
+    this.filename = null;
   }
   handleFile(e) {
     const file = e.currentTarget.files[0];
+    this.filename = file.name;
     const fileReader = new FileReader();
-    fileReader.onloaded= () => {
-      this.setState({photoFile: file, photoUrl: fileReader.result});
+    fileReader.onloadend= () => {
+      this.setState({post:{photoFile: file, photoUrl: fileReader.result}});
     };
     if (file) {
       fileReader.readAsDataURL(file);
@@ -25,9 +27,9 @@ class CreatePost extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('post[description]', this.state.description);
+    formData.append('post[description]', this.state.post.description);
     if (this.state.photoFile) {
-      formData.append('post[photo]', this.state.photoFile);
+      formData.append('post[photo]', this.state.post.photoFile);
     }
     $.ajax({
       url:'/api/posts',
@@ -35,18 +37,19 @@ class CreatePost extends React.Component {
       data: formData,
       contentType: false,
       processData: false
-    })
-    ;
+    });
+
   }
   handleInput(e) {
     this.setState({description: e.currentTarget.value});
   }
   render(){
-    console.log(this.state);
-    const preview = this.state.photoUrl ? <img src={this.state.photoUrl} />
+    console.log("CONSOLE.LOG(THIS.STATE)",this.state);
+    const preview = this.state.post.photoUrl ? <img src={this.state.post.photoUrl} />
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>
+           <label htmlFor="post-body">Body of Post</label>
           <label>description</label>
           <input onChange={this.handleInput.bind(this)} type='text'
             value={this.state.description}/>

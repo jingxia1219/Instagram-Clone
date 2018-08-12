@@ -4,7 +4,7 @@ import UploadPostContainer from '../posts/upload_post_container';
 import PostIndex from '../posts/post_index';
 
 const personalGreeting = ({currentUser, logout, posts}) => {
-  console.log("LOG[post]:", posts);
+  // console.log("LOG[post]:", posts);
   return (
     <div>
   <hgroup className="header-group">
