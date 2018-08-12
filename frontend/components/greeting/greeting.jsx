@@ -15,7 +15,7 @@ const Greeting = ({ currentUser, logout, demoLogin }) => {
       <button className="logout-button" onClick={logout}>
         Log Out
       </button>
-      <p>current user:{currentUser.username}</p>
+      <h6>current user:{currentUser.username}</h6>
     </hgroup>
   );
   return currentUser ? personalGreeting() : sessionLinks();

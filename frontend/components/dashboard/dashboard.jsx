@@ -1,7 +1,10 @@
 import React from 'react';
 import PostIndexContainer from '../posts/post_index_container';
+import UploadPostContainer from '../posts/upload_post_container';
+import PostIndex from '../posts/post_index';
 
-const personalGreeting = ({currentUser, logout}) => {
+const personalGreeting = ({currentUser, logout, posts}) => {
+  console.log("LOG[post]:", posts);
   return (
     <div>
   <hgroup className="header-group">
@@ -15,41 +18,16 @@ const personalGreeting = ({currentUser, logout}) => {
       <img onClick={logout} className='compass' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
     </div>
   </hgroup>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-<PostIndexContainer />
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
-  <h1>
-  dsafsdafsdfsadfsdaf</h1>
+  <h2>-----</h2>
+  <h2>-----</h2>
+  <h2>-----</h2>
+  <UploadPostContainer />
+  <h2>--------next line is post index container-----</h2>
+<PostIndexContainer posts={posts}/>
 
-  <p>current user:{currentUser.username}</p>
+
+
+<h2>current user:{currentUser.username}</h2>
   </div>
 );
 };

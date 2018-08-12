@@ -16,7 +16,7 @@
 }
 
 .insta-logo {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .compass {
@@ -59,6 +59,7 @@ input[type=text].search-box, .search-img {
 input[type=text].search-box {
   width: 240px;
   height: 25px;
+  cursor: not-allowed;
 }
 .search-img {
   z-index: 2;
@@ -79,7 +80,7 @@ input[type=text].search-box {
 
 ::placeholder {
   color: #C2C4C7;
-  
+
 }
 
 .header-group {

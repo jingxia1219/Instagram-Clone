@@ -1,13 +1,7 @@
 class Api::PostsController < ApplicationController
   def index
-    # if params[:author_id]
-    #   @posts = Post.where(author_id: params[:author_id])
-    #   render :index
-    # else
-    #   @posts = Post.all
-    #   render :index
-    # end
-    @posts = Post.all
+      @posts = Post.all
+      render :index
   end
 
   def show
@@ -43,12 +37,12 @@ class Api::PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.params[:id]
-    @Post.destroy
+    @post = Post.find(params[:id])
+    @post.destroy
   end
 
   private
   def post_params
-    params.require(:post).permit(:author_id, :description)
+    params.require(:post).permit(:author_id, :description, :img_url)
   end
 end

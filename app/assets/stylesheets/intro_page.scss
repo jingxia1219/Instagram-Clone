@@ -19,7 +19,7 @@ body{
   margin-left: 190px;
   margin-right: 20px;
   width: 440px;
-  margin-top: 170px;
+  margin-top: 110px;
   z-index: 2;
 }
 .instapic-text{
@@ -54,7 +54,7 @@ body{
 
  .login-form-container, .intro-signup, {
   padding-top: 40px;
-  margin-top: 138px;
+  margin-top: 58px;
   border: 1px solid lightgrey;
   background-color: white;
   width: 350px;
@@ -67,7 +67,7 @@ body{
   padding-bottom: 38px;
 }
 .seperate-box {
-  margin-top: 640px;
+  margin-top: 625px;
   border: 1px solid lightgrey;
   background: white;
   width: 350px;
@@ -157,10 +157,5 @@ input[type=submit],  .demo-user, .demo-user-intro {
   z-index: 3;
   opacity: 0.95;
   margin-left: 332px;
-  margin-top: 263px;
-}
-
-button {
-  background-color: blue;
-  z-index: 2;
+  margin-top: 193px;
 }
