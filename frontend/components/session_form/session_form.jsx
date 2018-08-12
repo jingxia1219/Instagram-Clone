@@ -62,6 +62,12 @@ demo(e) {
 
   render(){
     const signupEmail = this.signup();
+    let disabled;
+    if (this.state.username.length > 0 || this.state.password.length>0) {
+      disabled = 'enabled';
+    } else {
+      disabled = 'disabled';
+    }
     return (
       <div>
       <div className='login-form-container'>
@@ -90,11 +96,10 @@ demo(e) {
                 />
             {signupEmail}
             <br/>
-            <input className='session-submit' type='submit'
+            <input className={`${disabled}`} type='submit'
               value={this.props.formType} />
           </div>
         </form><br/>
-        <p className='or-dash'>or</p>
         <Link className="signin-link"  to={this.props.navLink}>{this.props.navLink}</Link>
       </div>
 

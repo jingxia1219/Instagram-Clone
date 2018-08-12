@@ -79,8 +79,9 @@ input[type=text].search-box {
 }
 
 ::placeholder {
-  color: #C2C4C7;
-
+  color: gray;
+  opacity: 0.7;
+  font-family: sans-serif;
 }
 
 .header-group {

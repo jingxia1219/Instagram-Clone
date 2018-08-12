@@ -11,9 +11,7 @@
 .instapic-text {
   font-family: cursive;
 }
-body{
 
-}
 .iphone-screen {
   position: absolute;
   margin-left: 190px;
@@ -99,13 +97,13 @@ input[type=text], input[type=password] {
   background-color: #FBFBFB;
   height: 30px;
   width: 250px;
-  color:grey;
+  color:black;
   margin-bottom: 3px;
   border: 1px solid #EBECEC;
   font-size: 14px;
 }
 
-input[type=submit],  .demo-user, .demo-user-intro {
+input[type=submit],  .demo-user, .demo-user-intro, button.session-submit {
   border-radius: 3px;
   cursor: pointer;
   color: white;
@@ -119,7 +117,10 @@ input[type=submit],  .demo-user, .demo-user-intro {
   font-family: serif;
   border: 0;
 }
-
+input[type=submit].disabled{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 .demo-user, .demo-user-intro {
   font-family: sans-serif;
   font-size: 14px;
