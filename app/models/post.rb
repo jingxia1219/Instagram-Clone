@@ -8,5 +8,5 @@ class_name: :User
 # has_many :likes
 # has_many :comments
 
-# has_one_attached :photo
+has_one_attached :photo
 end
