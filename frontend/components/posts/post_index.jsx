@@ -37,8 +37,8 @@ class PostIndex extends React.Component {
         <div key={`div-${post.id}`} className='post-item'>
           <li key={post.id}>
             <img  key={`img-${post.id}`} className="post-picture" src={post.photoUrl}/>
-            <h6 key={`post-user-${post.id}`} className='post-user'>{this.props.users[post.author_id-1].username}</h6>
-            <span className='post-description'>{post.description}</span>
+            <h6 key={`post-user-${post.id}`} className='post-user'>{this.props.users[post.author_id-1].username}:<span className='post-description'>{post.description}</span></h6>
+
           </li>
         </div>
         );
