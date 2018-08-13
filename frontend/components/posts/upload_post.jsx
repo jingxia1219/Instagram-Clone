@@ -32,7 +32,6 @@ class CreatePost extends React.Component {
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
     }
-    this.setState({photoUrl: this.state.photoUrl});
     console.log(formData);
     $.ajax({
       url:'/api/posts',
@@ -41,6 +40,7 @@ class CreatePost extends React.Component {
       contentType: false,
       processData: false
     });
+    this.setState({photoUrl: this.state.photoUrl});
 
   }
   handleInput(e) {
@@ -48,7 +48,7 @@ class CreatePost extends React.Component {
   }
   render(){
     // console.log("CONSOLE.LOG(THIS.STATE)",this.state);
-    const preview = this.state.photoUrl ? <img src={this.state.photoUrl} />
+    const preview = this.state.photoUrl ? <img className='preview' src={this.state.photoUrl} />
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>

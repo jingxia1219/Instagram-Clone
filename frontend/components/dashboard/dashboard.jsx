@@ -19,10 +19,8 @@ const personalGreeting = ({currentUser, logout, posts}) => {
     </div>
   </hgroup>
   <h2>-----</h2>
-  <h2>-----</h2>
-  <h2>-----</h2>
+
   <UploadPostContainer />
-  <h2>--------next line is post index container-----</h2>
 <PostIndexContainer posts={posts}/>
 
 

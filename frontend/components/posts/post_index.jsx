@@ -8,7 +8,7 @@ class PostIndex extends React.Component {
   //   };
   //   // this.fetchPosts = this.fetchPosts.bind(this);
   // }
-  
+
   //
   // fetchPosts() {
   //   $.ajax({
@@ -28,11 +28,12 @@ class PostIndex extends React.Component {
 
       const posts = this.props.posts.map( post=> {
         return (
-        <li key={post.id}>
-          {post.description}
-          <img src={post.photoUrl}/>
-        </li>
-
+        <div key={`div-${post.id}`} className='post-item'>
+          <li key={post.id}>
+            <img  key={`img-${post.id}`} className="post-picture" src={post.photoUrl}/>
+            <h6 key={`post-user-${post.id}`} className='post-user'>{this.props.users[post.author_id]}</h6> {post.description}
+          </li>
+        </div>
         );
       });
     return (
