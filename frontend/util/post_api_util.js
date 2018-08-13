@@ -21,7 +21,7 @@ export const createPost = post => (
 
 export const deletePost = (id) => (
   $.ajax({
-    method: 'destroy',
+    method: 'delete',
     url: `/api/posts/${id}`
   })
 );

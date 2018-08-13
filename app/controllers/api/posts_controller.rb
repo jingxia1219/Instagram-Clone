@@ -43,6 +43,6 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:author_id, :description, :img_url)
+    params.require(:post).permit(:author_id, :description, :photoUrl)
   end
 end

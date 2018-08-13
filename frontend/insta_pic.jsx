@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { signup, login, logout } from './actions/session_actions';
-import {createPost, fetchPosts, fetchPost} from './actions/posts/post_actions';
+import {createPost, fetchPosts, fetchPost, deletePost} from './actions/posts/post_actions';
 document.addEventListener("DOMContentLoaded", ()=>{
   let store;
   if (window.currentUser) {
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   } else {
     store = configureStore();
   }
+  window.deletePost = deletePost;
   window.fetchPosts = fetchPosts;
   window.fetchPost = fetchPost;
   window.createPost = createPost;

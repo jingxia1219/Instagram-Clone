@@ -1,13 +1,14 @@
 import React from 'react';
 
 class PostIndex extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: [],
-    };
-    // this.fetchPosts = this.fetchPosts.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     posts: [],
+  //   };
+  //   // this.fetchPosts = this.fetchPosts.bind(this);
+  // }
+  
   //
   // fetchPosts() {
   //   $.ajax({
@@ -18,7 +19,7 @@ class PostIndex extends React.Component {
   // }
   componentDidMount(){
     this.props.fetchPosts();
-    // this.fetchPosts();
+
   }
 
   render() {

@@ -5,11 +5,11 @@ import {merge} from 'lodash';
 class CreatePost extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { post: {
+    this.state =  {
       description: "",
       photoUrl: null,
       photoFile: null
-    }};
+    };
     this.filename = null;
   }
   handleFile(e) {
@@ -17,7 +17,7 @@ class CreatePost extends React.Component {
     this.filename = file.name;
     const fileReader = new FileReader();
     fileReader.onloadend= () => {
-      this.setState({post:{photoFile: file, photoUrl: fileReader.result}});
+       this.setState({photoFile: file, photoUrl: fileReader.result});
     };
     if (file) {
       fileReader.readAsDataURL(file);
@@ -27,10 +27,13 @@ class CreatePost extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('post[description]', this.state.post.description);
+    formData.append('post[description]', this.state.description);
+    formData.append('post[photoUrl]', this.state.photoUrl);
     if (this.state.photoFile) {
-      formData.append('post[photo]', this.state.post.photoFile);
+      formData.append('post[photo]', this.state.photoFile);
     }
+    this.setState({photoUrl: this.state.photoUrl});
+    console.log(formData);
     $.ajax({
       url:'/api/posts',
       method:'post',
@@ -44,19 +47,18 @@ class CreatePost extends React.Component {
     this.setState({description: e.currentTarget.value});
   }
   render(){
-    console.log("CONSOLE.LOG(THIS.STATE)",this.state);
-    const preview = this.state.post.photoUrl ? <img src={this.state.post.photoUrl} />
+    // console.log("CONSOLE.LOG(THIS.STATE)",this.state);
+    const preview = this.state.photoUrl ? <img src={this.state.photoUrl} />
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>
-           <label htmlFor="post-body">Body of Post</label>
           <label>description</label>
           <input onChange={this.handleInput.bind(this)} type='text'
             value={this.state.description}/>
         <input type="file" onChange={this.handleFile.bind(this)}/>
         <h3>Image preview</h3>
         {preview}
-        <button>Make a new post!</button>
+        <input type='submit' value='Make a new Post!'/>
         </form>
     );
   }
