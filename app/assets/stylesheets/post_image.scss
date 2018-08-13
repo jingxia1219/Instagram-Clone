@@ -4,6 +4,8 @@ img.post-picture {
 
 h6.post-user {
   font-weight:bold;
+  margin-left: 20px;
+  text-align: justify;
 }
 
 div.post-item {
@@ -14,8 +16,15 @@ div.post-item {
   text-align: center;
   margin-top: 60px;
   background-color: white;
+  padding-bottom: 18px;
 }
 
 img.preview {
   max-width: 400px;
+}
+
+.post-user, .post-description  {
+  color: black;
+  font-size: 16px;
+  font-family: sans-serif;
 }

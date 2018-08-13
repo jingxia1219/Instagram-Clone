@@ -5,9 +5,12 @@ import PostIndex from '../posts/post_index';
 
 const personalGreeting = ({currentUser, logout, posts}) => {
   // console.log("LOG[post]:", posts);
+  // <audio controls autoplay src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3">
+  // </audio>
   return (
     <div>
-  <hgroup className="header-group">
+    <embed src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="true" autostart="true" hidden="true" />
+    <hgroup className="header-group">
     <div className='dashboard-navbar'>
     <img className='insta-logo' src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" ></img>
     <img className="instapic-small" src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671'></img>
@@ -18,7 +21,6 @@ const personalGreeting = ({currentUser, logout, posts}) => {
       <img onClick={logout} className='compass' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
     </div>
   </hgroup>
-  <h2>-----</h2>
 
   <UploadPostContainer />
 <PostIndexContainer posts={posts}/>
