@@ -1,3 +1,16 @@
+div.post-item {
+  display: flex;
+  padding-top: 18px;
+  margin-left: 15%;
+  width: 614px;
+  border: 1px solid lightgrey;
+  text-align: center;
+  margin-top: 60px;
+  background-color: white;
+  padding-bottom: 22px;
+  overflow: hidden;
+}
+
 img.post-picture {
   max-width: 614px;
 }
@@ -8,25 +21,36 @@ h6.post-user {
   text-align: justify;
 }
 
-div.post-item {
-  padding-top: 50px; //take out after getting profile pic
-  margin-left: 15%;
-  width: 614px;
-  border: 1px solid lightgrey;
-  text-align: center;
-  margin-top: 60px;
-  background-color: white;
-  padding-bottom: 18px;
+img.like-heart, img.comment-logo, img.bookmark-logo {
+  height: 27px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  margin-left: 18px;
+}
+
+img.bookmark-logo {
+  float: right;
+  margin-right: 18px;
+}
+
+img.comment-logo{
+  margin-left: 10px;
+}
+
+img.post-picture {
+  margin-top: 20px;
 }
 
 img.preview {
   max-width: 400px;
 }
 
-.post-user, .post-description  {
+h6.post-user, .post-description  {
   color: black;
-  font-size: 16px;
+  font-size: 15px;
   font-family: sans-serif;
+  clear: left;
 }
 
 .post-description {
