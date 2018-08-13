@@ -24,7 +24,7 @@ class PostIndex extends React.Component {
 
   render() {
     // if (!this.props.posts) return null;
-    console.log("console.log(post): ABLE TO GET POSTS?",this.props.posts);
+    console.log("this.props:", this.props);
 
       const posts = this.props.posts.map( post=> {
         return (
