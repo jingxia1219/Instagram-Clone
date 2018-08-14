@@ -14,11 +14,15 @@ class UserProfile extends React.Component {
     };
   }
 
-ComponentDidMount() {
-  this.props.fetchUserPosts(this.props.currentUserId);
+componentDidMount() {
+  this.props.fetchPosts();
 }
 
     render() {
+      console.log(this.props.postsByUser);
+      const postsByUser =   this.props.postsByUser.map( post =>
+        <img src={post.photoUrl} />
+       );
       return (
         <div>
         <embed src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
@@ -44,6 +48,7 @@ ComponentDidMount() {
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
         </div>
+        {postsByUser}
       </div>
     );
     }
