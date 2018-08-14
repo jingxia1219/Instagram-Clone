@@ -21,7 +21,7 @@ componentDidMount() {
     render() {
       console.log(this.props.postsByUser);
       const postsByUser =   this.props.postsByUser.map( post =>
-        <div className='picture-box'><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
+        <div className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
       return (
         <div>
@@ -44,9 +44,12 @@ componentDidMount() {
 
       </hgroup>
         <div className='profile-body'>
+          <img className='default-user-icon' src="http://eoclimlab.eu/wp-content/uploads/2017/01/default.png" />
+          <div>
           <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
+          </div>
         </div>
         <div className='user-show-posts'>
         {postsByUser}
