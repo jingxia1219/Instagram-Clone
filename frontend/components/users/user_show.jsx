@@ -21,7 +21,7 @@ componentDidMount() {
     render() {
       console.log(this.props.postsByUser);
       const postsByUser =   this.props.postsByUser.map( post =>
-        <img src={post.photoUrl} />
+        <div className='picture-box'><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
       return (
         <div>
@@ -48,7 +48,9 @@ componentDidMount() {
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
         </div>
+        <div className='user-show-posts'>
         {postsByUser}
+        </div>
       </div>
     );
     }

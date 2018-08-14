@@ -6,7 +6,7 @@ img.user-show-instapic-small {
   margin-left: 20px;
 }
 
-.profile-body {
+.profile-body, .user-show-posts  {
   margin-left: 150px;
 }
 
@@ -16,6 +16,25 @@ img.user-show-instapic-small:hover {
 
 img.in-user-icon {
   transform: scale(1.1);
+}
+
+.picture-box {
+
+}
+
+img.user-show-post {
+  width: 293px;
+  // height: 293px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.user-show-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding-top: 30px;
 }
 
 h2.user-show-username {
