@@ -12,10 +12,8 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Dashboard from './dashboard/dashboard_container';
-
+import UserShow from './users/user_show_container';
 // const Dashboard = () => <h1>Hello!</h1>;
-// <ProtectedRoute path='/dashboard/' component={UserShow} />
-
 const App = () => (
   <div>
     <header>
@@ -25,6 +23,7 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} /> //log out
       <AuthRoute exact path='/' component={GreetingContainer} /> //log out
       <AuthRoute exact path='/signup' component={SignupFormContainer} /> //log out
+      <ProtectedRoute path='/user/:userId' component={UserShow} />
       <ProtectedRoute path='/dashboard' component={Dashboard} />
       <Redirect to='/' />
     </Switch>

@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import { fetchUser } from '../../actions/user_actions';
 import React from 'react-redux';
 import UserShow from './user_show';
+import { logout } from  '../../actions/session_actions';
 
-const mapStateToProps = ({entities}) => ({
-  currentUserId: entities.session.id
+const mapStateToProps = ({entities, session}) => ({
+  currentUserId: session.id,
+  currentUser: entities.users[session.id]
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchUser: (id) => dispatch(fetchUser(id))
+  fetchUser: (id) => dispatch(fetchUser(id)),
+  logout: () => dispatch(logout())
 });
 
 export default connect(

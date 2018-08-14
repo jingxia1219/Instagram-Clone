@@ -30,6 +30,11 @@ img.like-heart, img.comment-logo, img.bookmark-logo {
   margin-left: 18px;
 }
 
+img.like-heart:hover, img.comment-logo:hover, img.bookmark-logo:hover  {
+
+  transform: scale(1.2);
+}
+
 img.bookmark-logo {
   float: right;
   margin-right: 18px;

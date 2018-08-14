@@ -41,6 +41,14 @@
   cursor: pointer;
 }
 
+.empty-heart {
+  cursor: not-allowed;
+}
+
+.user-icon:hover, .compass:hover {
+  transform: scale(1.2);
+}
+
 .insta-logo{
   margin-right: 0px;
   padding-right: 25px;
