@@ -11,11 +11,14 @@ export const fetchPost = (id) => (
     url: `/api/posts/${id}`
   })
 );
-export const createPost = post => (
+export const createPost = formData => (
   $.ajax({
     method: 'post',
     url: "/api/posts",
-    data: { post }
+    dataType: "json",
+    contentType: false,
+    processData: false,
+    data: formData,
   })
 );
 

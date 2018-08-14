@@ -1,5 +1,5 @@
 div.post-item {
-  display: flex;
+  // display: flex;
   padding-top: 18px;
   margin-left: 15%;
   width: 614px;
@@ -13,6 +13,7 @@ div.post-item {
 
 img.post-picture {
   max-width: 614px;
+  clear: left;
 }
 
 h6.post-user {

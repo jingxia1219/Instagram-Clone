@@ -23,6 +23,12 @@ class PostIndex extends React.Component {
     this.setState({users: this.props.users});
   }
 
+componentWillReceiveProps(newProps) {
+  if (newProps.posts.length !== this.props.posts.length) {
+    this.props.fetchPosts();
+    this.props.fetchUsers();
+  }
+}
   render() {
     if (Object.keys(this.props.posts).length === 0) return null;
     if (Object.keys(this.props.users).length < 2) return null;

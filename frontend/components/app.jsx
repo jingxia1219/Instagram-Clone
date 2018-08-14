@@ -14,6 +14,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Dashboard from './dashboard/dashboard_container';
 
 // const Dashboard = () => <h1>Hello!</h1>;
+// <ProtectedRoute path='/dashboard/' component={UserShow} />
 
 const App = () => (
   <div>
@@ -24,7 +25,7 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} /> //log out
       <AuthRoute exact path='/' component={GreetingContainer} /> //log out
       <AuthRoute exact path='/signup' component={SignupFormContainer} /> //log out
-      <ProtectedRoute path ='/dashboard' component={Dashboard} />
+      <ProtectedRoute path='/dashboard' component={Dashboard} />
       <Redirect to='/' />
     </Switch>
   </div>

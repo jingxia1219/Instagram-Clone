@@ -25,22 +25,24 @@ class CreatePost extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const formData = new FormData();
     formData.append('post[description]', this.state.description);
     formData.append('post[photoUrl]', this.state.photoUrl);
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
     }
-    console.log(formData);
-    $.ajax({
-      url:'/api/posts',
-      method:'post',
-      data: formData,
-      contentType: false,
-      processData: false
-    });
-    this.setState({photoUrl: this.state.photoUrl});
+    // debugger;
+    // console.log(formData);
+    this.props.createPost(formData);
+    // $.ajax({
+    //   url:'/api/posts',
+    //   method:'post',
+    //   data: formData,
+    //   contentType: false,
+    //   processData: false
+    // });
+    // this.setState({photoUrl: this.state.photoUrl});
 
   }
   handleInput(e) {
