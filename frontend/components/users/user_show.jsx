@@ -6,12 +6,18 @@ import UploadPostContainer from '../posts/upload_post_container';
 import PostIndex from '../posts/post_index';
 import { Link } from 'react-router-dom';
 
-
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      posts: []
+    };
   }
+
+ComponentDidMount() {
+  this.props.fetchUserPosts(this.props.currentUserId);
+}
+
     render() {
       return (
         <div>
@@ -25,13 +31,19 @@ class UserProfile extends React.Component {
         <img className='search-img' src='https://www.freeiconspng.com/uploads/search-icon-png-1.png'/>
         <input className="search-box" type="text" placeholder="Search"></input>
           <img className="empty-heart" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38874877_1771545116274028_9140465076254277632_n.jpg?_nc_cat=0&oh=c04991f09b8c3e22fdc10f87a77feda7&oe=5BFA37A8" />
-            <Link to={`/user/${this.props.currentUser.id}`}>
-                  <img className='user-icon'
-                    src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38792536_1771544876274052_120399194711130112_n.jpg?_nc_cat=0&oh=cf5c93cafd2f4f659a349a05660ddbff&oe=5C0F99EE"/>
-                </Link>
+
+                  <img className='in-user-icon'
+                    src="https://cdn0.iconfinder.com/data/icons/users-android-l-lollipop-icon-pack/24/user-128.png"/>
+
           <img onClick={this.props.logout} className='compass' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
         </div>
+
       </hgroup>
+        <div className='profile-body'>
+          <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
+          <h2 className='bio'>Bio:</h2>
+          <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
+        </div>
       </div>
     );
     }

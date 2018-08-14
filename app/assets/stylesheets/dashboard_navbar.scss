@@ -8,7 +8,7 @@
 
 
 .insta-logo, .instapic-small, .search-box,.search-img,
-.empty-heart, .user-icon, .compass{
+.empty-heart, .user-icon, img.in-user-icon, .compass{
   height: 30px;
   margin-top: 22px;
   margin-bottom: 19px;
@@ -25,7 +25,7 @@
   margin-left: 750px;
 }
 
-.user-icon {
+.user-icon, img.in-user-icon {
   position: absolute;
   margin-left: 850px;
   height: 28px;

@@ -6,6 +6,33 @@ img.user-show-instapic-small {
   margin-left: 20px;
 }
 
+.profile-body {
+  margin-left: 150px;
+}
+
 img.user-show-instapic-small:hover {
+  transform: scale(1.2);
+}
+
+img.in-user-icon {
   transform: scale(1.1);
+}
+
+h2.user-show-username {
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 27px;
+}
+
+h2.bio, h3.bio-text {
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
+h2.bio {
+  font-size: 20px;
+}
+
+h3.bio-text {
+  font-size: 16px;
 }

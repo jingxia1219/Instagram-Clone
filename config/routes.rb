@@ -8,7 +8,9 @@ namespace :api, defaults: {format: :json} do
   end
     resources :comments, only:[:create, :update, :destroy]
   end
-  resources :users, only: [:create, :index, :show]
+  resources :users, only: [:create, :index, :show] do
+    resources :posts, only: [:show, :index]
+  end
   resource :session, only:[:create, :destroy, :show]
  end
 end

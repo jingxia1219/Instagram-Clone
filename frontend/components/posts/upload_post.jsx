@@ -35,6 +35,11 @@ class CreatePost extends React.Component {
     // debugger;
     // console.log(formData);
     this.props.createPost(formData);
+    this.setState({
+      description: "",
+      photoUrl: null,
+      photoFile: null
+    });
     // $.ajax({
     //   url:'/api/posts',
     //   method:'post',
