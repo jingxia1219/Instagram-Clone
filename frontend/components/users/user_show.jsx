@@ -20,7 +20,6 @@ componentDidMount() {
 }
 
     render() {
-      console.log(this.props.postsByUser);
       const postsByUser =   this.props.postsByUser.map( post =>
         <div key={`picture-box-key-${post.id}`} className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
@@ -49,7 +48,7 @@ componentDidMount() {
         <div className='profile-body'>
           <img className='default-user-icon'
             onClick={this.props.openModalProfile}
-            src='https://www.menon.no/wp-content/uploads/person-placeholder.jpg' />
+            src={this.props.currentUser.avatarUrl} />
           <div>
           <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
           <h2 className='bio'>Bio:</h2>

@@ -41,27 +41,20 @@ class CreatePost extends React.Component {
       photoFile: null
     }, this.props.closeModal
   );
-    // $.ajax({
-    //   url:'/api/posts',
-    //   method:'post',
-    //   data: formData,
-    //   contentType: false,
-    //   processData: false
-    // });
-    // this.setState({photoUrl: this.state.photoUrl});
 
   }
   handleInput(e) {
     this.setState({description: e.currentTarget.value});
   }
   render(){
-    // console.log("CONSOLE.LOG(THIS.STATE)",this.state);
     const preview = this.state.photoUrl ? <img className='preview' src={this.state.photoUrl} />
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label><h2>New Post</h2></label>
-          <input className='modal-description' placeholder="New Post Description" onChange={this.handleInput.bind(this)} type='text'
+          <input className='modal-description'
+            placeholder="New Post Description"
+            onChange={this.handleInput.bind(this)} type='text'
             value={this.state.description}/>
         <input type="file" onChange={this.handleFile.bind(this)}/>
         <div className='preview-box'>{preview}</div>

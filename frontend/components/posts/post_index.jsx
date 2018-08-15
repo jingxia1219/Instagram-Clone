@@ -1,47 +1,18 @@
 import React from 'react';
 
 class PostIndex extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     users: [],
-  //   };
-    // this.fetchPosts = this.fetchPosts.bind(this);
-  // }
-  //
-  //
-  // fetchPosts() {
-  //   $.ajax({
-  //     url: "/api/posts"
-  //   }).then(posts => {
-  //     this.setState({posts});
-  //   });
-  // }
+
   componentDidMount(){
     this.props.fetchPosts();
     this.props.fetchUsers();
   }
 
-// componentWillReceiveProps(newProps) {
-//   if (newProps.posts.length !== this.props.posts.length) {
-//     this.props.fetchPosts();
-//     this.props.fetchUsers();
-//   }
-// }
+
   render() {
     if (Object.keys(this.props.posts).length < 1) return null;
     if (Object.keys(this.props.users).length < 2) return null;
     // if ( !this.props.users) return null;
-    // debugger;
-
-
-    // debugger;
       const posts = this.props.posts.map( post=> {
-        // console.log("THIS.state.users:", this.state.users);
-        // console.log("THIS.props.users:", this.props.users);
-        // console.log("post.author_id:", post.author_id);
-        // console.log("THIS.state.users[post.author_id]:", this.props.users[post.author_id]);
-        // console.log("THIS.props.users[post.author_id]:", this.props.users[post.author_id]);
         return (
         <div key={`div-${post.id}`} className='post-item'>
           <li key={post.id}>

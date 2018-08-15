@@ -3,11 +3,19 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest,uniqueness: true
   validates :password, length:{minimum:6, allow_nil:true}
   attr_reader :password
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_profile_picture
 
   has_many :posts
   has_many :comments
   has_many :followings
+  has_one_attached :profile_picture
+
+  def ensure_profile_picture
+    unless self.profile_picture.attached?
+      file = EzDownload.open("https://www.menon.no/wp-content/uploads/person-placeholder.jpg")
+      self.profile_picture.attach(io: file, filename: 'default_profile_picture')
+    end
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -30,7 +38,6 @@ class User < ApplicationRecord
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
-  has_one_attached :photo
 
   private
   def ensure_session_token

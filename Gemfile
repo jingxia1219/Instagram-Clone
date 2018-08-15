@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+gem 'ez_download', '~> 0.2.0'
 gem 'rails_12factor'
 ruby '2.3.1'
 gem "aws-sdk-s3"
