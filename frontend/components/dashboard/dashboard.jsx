@@ -12,7 +12,7 @@ const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) =>
   return (
     <div>
     <embed src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
-    <button onClick={modalOpen}>New Post</button>
+    <button className='create-post-modal-dashboard' onClick={modalOpen}>New Post</button>
     <Modal />
     <hgroup className="header-group">
     <div className='dashboard-navbar'>

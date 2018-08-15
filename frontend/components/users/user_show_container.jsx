@@ -6,6 +6,7 @@ import React from 'react-redux';
 import UserShow from './user_show';
 import { logout } from  '../../actions/session_actions';
 import {selectPostByUser} from '../../reducers/selector';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({entities, session}, ownProps) => ({
   currentUserId: session.id,
@@ -16,7 +17,9 @@ const mapStateToProps = ({entities, session}, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchUser: (id) => dispatch(fetchUser(id)),
   logout: () => dispatch(logout()),
-  fetchPosts: () => dispatch(fetchPosts())
+  fetchPosts: () => dispatch(fetchPosts()),
+  openModal: () => dispatch(openModal("createPost")),
+  closeModal: ()=> dispatch(closeModal())
 });
 
 export default connect(

@@ -5,6 +5,7 @@ import PostIndexContainer from '../posts/post_index_container';
 import UploadPostContainer from '../posts/upload_post_container';
 import PostIndex from '../posts/post_index';
 import { Link } from 'react-router-dom';
+import Modal from '../modals/modal';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -49,7 +50,8 @@ componentDidMount() {
           <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
-            <UploadPostContainer />
+            <button onClick={this.props.openModal}>New Post</button>
+            <Modal/>
           </div>
         </div>
         <div className='user-show-posts'>
