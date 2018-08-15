@@ -5,7 +5,7 @@ div.post-item {
   width: 614px;
   border: 1px solid lightgrey;
   text-align: center;
-  margin-top: 60px;
+  margin-bottom: 60px;
   background-color: white;
   padding-bottom: 22px;
   overflow: hidden;
@@ -50,7 +50,10 @@ img.post-picture {
 
 img.preview {
   max-width: 400px;
+  float: right;
+
 }
+
 
 h6.post-user, .post-description  {
   color: black;

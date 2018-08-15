@@ -39,7 +39,8 @@ class CreatePost extends React.Component {
       description: "",
       photoUrl: null,
       photoFile: null
-    });
+    }, this.props.closeModal
+  );
     // $.ajax({
     //   url:'/api/posts',
     //   method:'post',
@@ -59,13 +60,11 @@ class CreatePost extends React.Component {
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <label>description</label>
-          <input onChange={this.handleInput.bind(this)} type='text'
+          <input placeholder="New Post Description" onChange={this.handleInput.bind(this)} type='text'
             value={this.state.description}/>
         <input type="file" onChange={this.handleFile.bind(this)}/>
-        <h3>Image preview</h3>
         {preview}
-        <input type='submit' value='Make a new Post!'/>
+        <input className='make-post-button' type='submit' value='Post!'/>
         </form>
     );
   }

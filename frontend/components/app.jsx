@@ -24,7 +24,7 @@ const App = () => (
       <AuthRoute exact path='/' component={GreetingContainer} /> //log out
       <AuthRoute exact path='/signup' component={SignupFormContainer} /> //log out
       <ProtectedRoute exact path='/user/:userId' component={UserShow} />
-      <ProtectedRoute path='/dashboard' component={Dashboard} />
+      <ProtectedRoute exact path='/dashboard' component={Dashboard} />
       <Redirect to='/' />
     </Switch>
   </div>

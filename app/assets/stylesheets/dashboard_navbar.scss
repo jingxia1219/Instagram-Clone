@@ -2,13 +2,16 @@
   margin-left: 50px;
   text-align: justify;
   border-bottom: 1px solid #E9E8E8;
-  z-index: 999;
+  z-index: 5;
+  margin-bottom: 0;
 }
 
-
+img.upload-post {
+  // margin-left: 500px;
+}
 
 .insta-logo, .instapic-small, .search-box,.search-img,
-.empty-heart, .user-icon, img.in-user-icon, .compass{
+.empty-heart, .user-icon, img.in-user-icon, .compass, img.upload-post {
   height: 30px;
   margin-top: 22px;
   margin-bottom: 19px;

@@ -16,6 +16,15 @@ img.user-show-instapic-small:hover {
   transform: scale(1.2);
 }
 
+input[type=submit].make-post-button {
+    height: 26px;
+    width: 70px;
+    border-radius: 10%;
+    border: 1px solid lightgrey;
+    background-color: inherit;
+    color: black;
+}
+
 .user-show-posts {
   border-top: 1px solid lightgrey;
   width: 970px;
@@ -25,9 +34,7 @@ img.in-user-icon {
   transform: scale(1.1);
 }
 
-.picture-box {
 
-}
 
 img.user-show-post {
   width: 293px;

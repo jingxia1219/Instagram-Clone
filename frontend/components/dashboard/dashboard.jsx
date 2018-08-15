@@ -3,13 +3,17 @@ import PostIndexContainer from '../posts/post_index_container';
 import UploadPostContainer from '../posts/upload_post_container';
 import PostIndex from '../posts/post_index';
 import { Link } from 'react-router-dom';
-const personalGreeting = ({currentUser, logout, posts, fetchUser}) => {
+import Modal from '../modals/modal';
+
+const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) => {
   // console.log("LOG[post]:", posts);
   // <audio controls autoplay src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3">
   // </audio>
   return (
     <div>
     <embed src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
+    <button onClick={modalOpen}>New Post</button>
+    <Modal />
     <hgroup className="header-group">
     <div className='dashboard-navbar'>
     <img className='insta-logo' src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" ></img>
@@ -21,15 +25,10 @@ const personalGreeting = ({currentUser, logout, posts, fetchUser}) => {
               <img className='user-icon'
                 src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38792536_1771544876274052_120399194711130112_n.jpg?_nc_cat=0&oh=cf5c93cafd2f4f659a349a05660ddbff&oe=5C0F99EE"/>
             </Link>
-      <img onClick={logout} className='compass' src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
+      <img onClick={logout} className='compass' title="Log out" src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
     </div>
   </hgroup>
-
-  <UploadPostContainer />
 <PostIndexContainer posts={posts}/>
-
-
-
 <h2>current user:{currentUser.username}</h2>
   </div>
 );

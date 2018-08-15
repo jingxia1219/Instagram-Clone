@@ -44,11 +44,12 @@ componentDidMount() {
 
       </hgroup>
         <div className='profile-body'>
-          <img className='default-user-icon' src="http://eoclimlab.eu/wp-content/uploads/2017/01/default.png" />
+          <img className='default-user-icon' src={this.props.currentUser.avatar_url} />
           <div>
           <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
+            <UploadPostContainer />
           </div>
         </div>
         <div className='user-show-posts'>
