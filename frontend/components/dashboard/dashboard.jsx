@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom';
 import Modal from '../modals/modal';
 
 const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) => {
-  // console.log("LOG[post]:", posts);
-  // <audio controls autoplay src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3">
-  // </audio>
+
   return (
     <div>
+    <embed className='music' src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
     <hgroup className="header-group">
     <div className='dashboard-navbar'>
     <img className='insta-logo' src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" ></img>
