@@ -7,7 +7,7 @@ class UpdateUserProfile extends React.Component {
     super(props);
     this.state = {
       bio: this.props.currentUser.bio,
-      avatarUrl: null,
+      avatar_url: null,
       photoFile: null
     };
     this.filename = null;
@@ -15,12 +15,12 @@ class UpdateUserProfile extends React.Component {
 
   handleSubmit(e){
     const formData = new FormData();
-    formData.append('profile[photoUrl]', this.state.photoUrl);
+    formData.append('profile[avatar_url]', this.state.avatar_url);
     if (this.state.photoFile) {
     formData.append('profile[photo]', this.state.photoFile);
     }
     this.setState({
-      avatarUrl: "",
+      avatar_url: "",
       photoFile: null,
     }, this.props.closeModal
    );
@@ -37,7 +37,7 @@ class UpdateUserProfile extends React.Component {
     this.filename = file.name;
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
-      this.setState({photoFile: file, avatarUrl:
+      this.setState({photoFile: file, avatar_url:
       fileReader.result});
       if (file) {
         fileReader.readAsDataURL(file);
@@ -46,7 +46,7 @@ class UpdateUserProfile extends React.Component {
   }
 
   render() {
-    const preview = this.state.avatarUrl ? <img className='preview' src={this.state.avatarUrl} />
+    const preview = this.state.avatar_url ? <img className='preview' src={this.state.avatar_url} />
     : null;
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
@@ -60,7 +60,6 @@ class UpdateUserProfile extends React.Component {
           <input type="file" onChange={this.handleFile.bind(this)}/>
             <div className='preview-box'>{preview}</div>
               <input className='make-post-button' type='submit' value='Update'/>
-                <div className='preview-box'>{preview}</div>
       </form>
     );
   }
