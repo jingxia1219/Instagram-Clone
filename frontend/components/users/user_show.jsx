@@ -35,7 +35,7 @@ componentDidMount() {
           </Link>
         <img className='search-img' src='https://www.freeiconspng.com/uploads/search-icon-png-1.png'/>
         <input className="search-box" type="text" placeholder="Search"></input>
-          <button className='create-post-modal-dashboard' onClick={this.props.modalOpenPost}>New Post</button>
+          <button className='create-post-modal-dashboard' onClick={this.props.openModalPost}>New Post</button>
 
           <img className="empty-heart" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38874877_1771545116274028_9140465076254277632_n.jpg?_nc_cat=0&oh=c04991f09b8c3e22fdc10f87a77feda7&oe=5BFA37A8" />
 
