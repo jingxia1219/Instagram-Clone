@@ -12,14 +12,14 @@ const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) =>
   return (
     <div>
     <embed src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
-    <button className='create-post-modal-dashboard' onClick={modalOpen}>New Post</button>
-    <Modal />
     <hgroup className="header-group">
     <div className='dashboard-navbar'>
     <img className='insta-logo' src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" ></img>
     <img className="instapic-small"  src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671'></img>
     <img className='search-img' src='https://www.freeiconspng.com/uploads/search-icon-png-1.png'/>
     <input className="search-box" type="text" placeholder="Search"></input>
+      <button className='create-post-modal-dashboard' onClick={modalOpen}>New Post</button>
+      <Modal />
       <img className="empty-heart" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38874877_1771545116274028_9140465076254277632_n.jpg?_nc_cat=0&oh=c04991f09b8c3e22fdc10f87a77feda7&oe=5BFA37A8" />
         <Link to={`/user/${currentUser.id}`}>
               <img className='user-icon'
