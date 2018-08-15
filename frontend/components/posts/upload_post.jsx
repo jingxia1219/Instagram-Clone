@@ -60,10 +60,11 @@ class CreatePost extends React.Component {
   : null;
     return (
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input placeholder="New Post Description" onChange={this.handleInput.bind(this)} type='text'
+          <label><h2>New Post</h2></label>
+          <input className='modal-description' placeholder="New Post Description" onChange={this.handleInput.bind(this)} type='text'
             value={this.state.description}/>
         <input type="file" onChange={this.handleFile.bind(this)}/>
-        {preview}
+        <div className='preview-box'>{preview}</div>
         <input className='make-post-button' type='submit' value='Post!'/>
         </form>
     );

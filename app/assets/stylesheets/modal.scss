@@ -8,7 +8,40 @@
   z-index: 10;
 }
 
+input[type=type].modal-description {
+  margin-bottom: 40px;
+}
+input[type=file] {
+  margin-top: 25px;
+  margin-left: 80px;
+}
+.preview-box {
+  display: flex;
+  // background-color: blue;
+  margin-top: 30px;
+  border: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  align-self: center;
+  background-color: #FBFBFB;
+  // background-color: blue;
+  align-content: center;
+  margin-left: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+img.preview {
+  align-self: center;
+  
+  width: 300px;
+  height: auto;
+}
+
 .modal-child {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
   background-color: white;
   height: 600px;
   width: 400px;
