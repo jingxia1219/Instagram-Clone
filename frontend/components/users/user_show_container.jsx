@@ -18,8 +18,9 @@ const mapDispatchToProps = (dispatch) => ({
   fetchUser: (id) => dispatch(fetchUser(id)),
   logout: () => dispatch(logout()),
   fetchPosts: () => dispatch(fetchPosts()),
-  openModal: () => dispatch(openModal("createPost")),
-  closeModal: ()=> dispatch(closeModal())
+  openModalPost: () => dispatch(openModal("createPost")),
+  closeModal: ()=> dispatch(closeModal()),
+  openModalProfile: () => dispatch(openModal("UpdateProfile"))
 });
 
 export default connect(

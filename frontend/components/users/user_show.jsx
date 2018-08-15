@@ -22,7 +22,7 @@ componentDidMount() {
     render() {
       console.log(this.props.postsByUser);
       const postsByUser =   this.props.postsByUser.map( post =>
-        <div className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
+        <div key={`picture-box-key-${post.id}`} className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
       return (
         <div>
@@ -45,12 +45,14 @@ componentDidMount() {
 
       </hgroup>
         <div className='profile-body'>
-          <img className='default-user-icon' src={this.props.currentUser.avatar_url} />
+          <img className='default-user-icon'
+            onClick={this.props.openModalProfile}
+            src='https://www.menon.no/wp-content/uploads/person-placeholder.jpg' />
           <div>
           <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
           <h2 className='bio'>Bio:</h2>
           <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
-            <button onClick={this.props.openModal}>New Post</button>
+            <button onClick={this.props.openModalPost}>New Post</button>
             <Modal/>
           </div>
         </div>

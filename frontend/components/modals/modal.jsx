@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import UploadPostContainer from '../posts/upload_post_container';
+import UpdateProfileContainer from '../users/update_user_profile_container';
 //import update profile container
 ;
 

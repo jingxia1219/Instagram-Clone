@@ -8,6 +8,10 @@
   z-index: 10;
 }
 
+img.default-user-icon:hover {
+  cursor: pointer;
+}
+
 input[type=type].modal-description {
   margin-bottom: 40px;
 }
@@ -27,12 +31,13 @@ input[type=file] {
   align-content: center;
   margin-left: 50px;
   width: 300px;
+  overflow: hidden;
   height: 300px;
 }
 
 img.preview {
   align-self: center;
-  
+
   width: 300px;
   height: auto;
 }
