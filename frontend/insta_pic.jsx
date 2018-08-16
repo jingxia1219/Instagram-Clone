@@ -5,6 +5,8 @@ import configureStore from './store/store';
 import { signup, login, logout } from './actions/session_actions';
 import {createPost, fetchPosts, fetchPost, deletePost} from './actions/posts/post_actions';
 import { fetchUsers } from './actions/user_actions';
+import { createFollow } from './actions/follow_actions';
+
 document.addEventListener("DOMContentLoaded", ()=>{
   let store;
   if (window.currentUser) {
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   } else {
     store = configureStore();
   }
+  window.createFollow = createFollow;
   window.fetchUsers = fetchUsers;
   window.deletePost = deletePost;
   window.fetchPosts = fetchPosts;
