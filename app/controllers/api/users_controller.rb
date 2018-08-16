@@ -6,9 +6,8 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    # debugger
-    @user.profile_picture.purge
-    @user.profile_picture.attach(params[:user][:avatarUrl])
+    debugger
+    # @user.profile_picture.attach(params[:user][:avatarUrl])
     if @user.update_attributes(user_params)
       render :show
     else
@@ -32,7 +31,7 @@ class Api::UsersController < ApplicationController
 
     private
     def user_params
-      params.require(:user).permit(:username,:password,:email,:bio, :avatar_url)
+      params.require(:user).permit(:username,:password,:email,:bio, :profile_picture)
     end
 
 end

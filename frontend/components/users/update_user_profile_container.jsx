@@ -12,7 +12,7 @@ const mapStateToProps = ({session, entities}) => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-  updateUser: (user) => dispatch(updateUser(user)),
+  updateUser: (payload) => dispatch(updateUser(payload)),
   closeModal: ()=> dispatch(closeModal())
 };
 };

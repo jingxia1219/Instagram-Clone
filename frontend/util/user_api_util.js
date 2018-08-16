@@ -5,12 +5,16 @@ export const fetchUsers = () => (
   })
 );
 
-export const updateUser = (user) => (
-  $.ajax({
+export const updateUser = ( payload) => {
+  debugger;
+  return $.ajax({
     method: 'patch',
-    url: `/api/users/${user.id}`
-  })
-);
+    url: `/api/users/${payload.userId}`,
+    data: payload.user,
+    contentType: false,
+    processData: false,
+  });
+};
 
 export const fetchUser = (user) => (
   $.ajax({

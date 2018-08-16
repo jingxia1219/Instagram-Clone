@@ -12,29 +12,7 @@ class UpdateUserProfile extends React.Component {
     };
     this.filename = null;
   }
-
-  handleSubmit(e){
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('user[avatarUrl]', this.state.avatarUrl);
-    if (this.state.photoFile) {
-    formData.append('user[profile_picture]', this.state.photoFile);
-    }
-    this.props.updateUser(this.props.currentUser);
-    this.setState({
-      bio: this.props.currentUser.bio,
-      avatarUrl: null,
-      photoFile: null,
-    }, this.props.closeModal
-   );
-  }
-  //
-  // handleInput(e) {
-  //   this.setState({
-  //     bio: e.currentTarget.value
-  //   });
-  // }
-
+  
   handleFile(e) {
     const file = e.currentTarget.files[0];
     this.filename = file.name;
@@ -45,6 +23,22 @@ class UpdateUserProfile extends React.Component {
       if (file) {
         fileReader.readAsDataURL(file);
       }
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    const formData = new FormData();
+    if (this.state.photoFile) {
+    formData.append('user[profile_picture]', this.state.photoFile);
+    }
+    // debugger
+    this.props.updateUser( {userId: this.props.currentUser.id, user: formData});
+    this.setState({
+      bio: this.props.currentUser.bio,
+      avatarUrl: null,
+      photoFile: null,
+    }, this.props.closeModal
+   );
   }
 
   render() {
