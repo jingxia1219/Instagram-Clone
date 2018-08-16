@@ -58,90 +58,90 @@ user2 = User.create(username:'Ron_Weasley', password: '123456', email: 'Ron_Weas
   post11.save!
 
   post12 = Post.new(description:"", author_id: 1)
-  file = EzDownload.open(  "https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/a/aa/Harry-Potter-Images-harry-potter-the-boy-who-lived-and-much-more-33972874-1920-1280.jpg/revision/latest?cb=20150531191541")
+  file = EzDownload.open("https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/a/aa/Harry-Potter-Images-harry-potter-the-boy-who-lived-and-much-more-33972874-1920-1280.jpg/revision/latest?cb=20150531191541")
   post12.photo.attach(io: file, filename: 'post12')
   post12.save!
 
   post13 = Post.new(description:"We can get through everything together. I'm so thankful to have my best friends!", author_id: 1)
-  file = EzDownload.open(  "http://harrypotterpublicenlightenmentproject.com/wp-content/uploads/2017/09/FEATURED.jpg")
+  file = EzDownload.open("http://harrypotterpublicenlightenmentproject.com/wp-content/uploads/2017/09/FEATURED.jpg")
   post13.photo.attach(io: file, filename: 'post13')
   post13.save!
 
   post14 = Post.new(description:"I miss being 8...", author_id: 3 )
-  file = EzDownload.open(  "https://media1.popsugar-assets.com/files/thumbor/RSd5EARN47GXczZOWQS1whEXd0A/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/08/24/768/n/1922283/7e7ede84_edit_img_cover_file_13839_1310694590_Ron-Weasley-ronald-weasley-30901065-1024-768/i/Ron-Weasley-Pictures-From-Harry-Potter-Movies.jpg")
+  file = EzDownload.open("https://media1.popsugar-assets.com/files/thumbor/RSd5EARN47GXczZOWQS1whEXd0A/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/08/24/768/n/1922283/7e7ede84_edit_img_cover_file_13839_1310694590_Ron-Weasley-ronald-weasley-30901065-1024-768/i/Ron-Weasley-Pictures-From-Harry-Potter-Movies.jpg")
   post14.photo.attach(io: file, filename: 'post14')
   post14.save!
 
   post15 = Post.new(description:"That creepy moment!", author_id: 2 )
-  file = EzDownload.open(  "https://www.overthinkingit.com/wp-content/uploads/2009/09/aaaaaaa.jpg")
+  file = EzDownload.open("https://www.overthinkingit.com/wp-content/uploads/2009/09/aaaaaaa.jpg")
   post15.photo.attach(io: file, filename: 'post15')
   post15.save!
 
   post16 = Post.new(description:"it's my first Wand!", author_id: 1 )
-  file = EzDownload.open(  "https://www.hbo.com/content/dam/hbodata/movies/h/harry-potter-and-the-order-of-the-phoenix/video-stills/harry-potter-theatrical-46448309_PRO35_10.jpg")
+  file = EzDownload.open("https://www.hbo.com/content/dam/hbodata/movies/h/harry-potter-and-the-order-of-the-phoenix/video-stills/harry-potter-theatrical-46448309_PRO35_10.jpg")
   post16.photo.attach(io: file, filename: 'post16')
   post16.save!
 
   post17 = Post.new(description:"My best game", author_id: 3)
-  file = EzDownload.open(  "https://cdn.vox-cdn.com/thumbor/90uUqtYCkktMhip2ZqxbdkUKk1g=/0x0:1532x1270/1200x800/filters:focal(791x198:1035x442)/cdn.vox-cdn.com/uploads/chorus_image/image/59589497/firebolt.0.png")
+  file = EzDownload.open("https://cdn.vox-cdn.com/thumbor/90uUqtYCkktMhip2ZqxbdkUKk1g=/0x0:1532x1270/1200x800/filters:focal(791x198:1035x442)/cdn.vox-cdn.com/uploads/chorus_image/image/59589497/firebolt.0.png")
   post17.photo.attach(io: file, filename: 'post17')
   post17.save!
 
   post18 = Post.new(description:"Another adventure waiting for us", author_id: 2 )
-  file = EzDownload.open(  "http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/2016/11/hp-and-the-prisoner-of-azkaban.jpg?itok=pMPgSSZK")
+  file = EzDownload.open("http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/2016/11/hp-and-the-prisoner-of-azkaban.jpg?itok=pMPgSSZK")
   post18.photo.attach(io: file, filename: 'post18')
   post18.save!
 
   post19 = Post.new(description:"Love my friends!", author_id: 1 )
-  file = EzDownload.open(  "https://timedotcom.files.wordpress.com/2017/06/harry-potter-and-the-chamber-of-secrets_db0092.jpg?quality=85")
+  file = EzDownload.open("https://timedotcom.files.wordpress.com/2017/06/harry-potter-and-the-chamber-of-secrets_db0092.jpg?quality=85")
   post19.photo.attach(io: file, filename: 'post19')
   post19.save!
 
   post20 = Post.new(description:"farewell picture!", author_id: 1)
-  file = EzDownload.open(  "https://imgix.bustle.com/rehost/2016/9/14/9b1ce226-3f0d-4222-be55-c35a9d5d918b.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70")
+  file = EzDownload.open("https://imgix.bustle.com/rehost/2016/9/14/9b1ce226-3f0d-4222-be55-c35a9d5d918b.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70")
   post20.photo.attach(io: file, filename: 'post20')
   post20.save!
 
   post21 = Post.new(description:"One of the most important moments of my life!", author_id: 1)
-  file = EzDownload.open(  "https://img.buzzfeed.com/buzzfeed-static/static/2017-02/2/11/enhanced/buzzfeed-prod-fastlane-02/original-7101-1486053612-3.jpg?crop=1438:752;90,0")
+  file = EzDownload.open("https://img.buzzfeed.com/buzzfeed-static/static/2017-02/2/11/enhanced/buzzfeed-prod-fastlane-02/original-7101-1486053612-3.jpg?crop=1438:752;90,0")
   post21.photo.attach(io: file, filename: 'post21')
   post21.save!
 
   post22 = Post.new(description:"Night view at Hogwarts!", author_id: 2 )
-  file = EzDownload.open(  "http://images.fandango.com/images/fandangoblog/hogwartsschoolpotter.jpg")
+  file = EzDownload.open("http://images.fandango.com/images/fandangoblog/hogwartsschoolpotter.jpg")
   post22.photo.attach(io: file, filename: 'post22')
   post22.save!
 
   post23 = Post.new(description:"When we were young", author_id: 3 )
-  file = EzDownload.open(  "https://media1.popsugar-assets.com/files/thumbor/GQ0FOu-7E-WfFezYrqIgRH549LI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/08/03/817/n/1922283/67e5ea615b64a0f39da582.51811241_/i/Harry-Potter-Band-Name-Tweets.jpg")
+  file = EzDownload.open("https://media1.popsugar-assets.com/files/thumbor/GQ0FOu-7E-WfFezYrqIgRH549LI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/08/03/817/n/1922283/67e5ea615b64a0f39da582.51811241_/i/Harry-Potter-Band-Name-Tweets.jpg")
   post23.photo.attach(io: file, filename: 'post23')
   post23.save!
 
   post24 = Post.new(description:"I Love food!!", author_id: 1 )
-  file = EzDownload.open(  "https://media1.popsugar-assets.com/files/thumbor/kgKVUAFAqo3_xYHbXFTrXMY9t0k/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/01/27/711/n/3019466/3ee3b8d22ac44ccc_MCDHAP2_EC221_H.JPG")
+  file = EzDownload.open("https://media1.popsugar-assets.com/files/thumbor/kgKVUAFAqo3_xYHbXFTrXMY9t0k/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/01/27/711/n/3019466/3ee3b8d22ac44ccc_MCDHAP2_EC221_H.JPG")
   post24.photo.attach(io: file, filename: 'post24')
   post24.save!
 
   post25 = Post.new(description:"Aww....My fanboy drew me a pic!", author_id: 2 )
-  file = EzDownload.open(  "https://i.ytimg.com/vi/AFEcJMTG7GE/maxresdefault.jpg")
+  file = EzDownload.open("https://i.ytimg.com/vi/AFEcJMTG7GE/maxresdefault.jpg")
   post25.photo.attach(io: file, filename: 'post25')
   post25.save!
 
   post26 = Post.new(description:"I hope i never see them again", author_id: 3 )
-  file = EzDownload.open(  "http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2015/04/villains.jpg")
+  file = EzDownload.open("http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2015/04/villains.jpg")
   post26.photo.attach(io: file, filename: 'post26')
   post26.save!
 
   post27 = Post.new(description:"I miss dumbledore..", author_id: 1 )
-  file = EzDownload.open(  "https://cdn.getyourguide.com/img/tour_img-1020984-70.jpg")
+  file = EzDownload.open("https://cdn.getyourguide.com/img/tour_img-1020984-70.jpg")
   post27.photo.attach(io: file, filename: 'post27')
   post27.save!
   post28 = Post.new(description:"Look who's here", author_id: 1 )
-  file = EzDownload.open(  "http://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/hp_fan_theories.jpg?itok=57kTwhlL&resize=1100x1100")
+  file = EzDownload.open("http://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/hp_fan_theories.jpg?itok=57kTwhlL&resize=1100x1100")
   post28.photo.attach(io: file, filename: 'post28')
   post28.save!
   post29 = Post.new(description:"Broke another Wand...", author_id: 3  )
-  file = EzDownload.open(  "https://www.factinate.com/wp-content/uploads/2017/11/9-9.jpg")
+  file = EzDownload.open("https://www.factinate.com/wp-content/uploads/2017/11/9-9.jpg")
   post29.photo.attach(io: file, filename: 'post29')
   post29.save!
 post30 = Post.new(description:"You will not get away, I'll fight you till I die", author_id: 1  )
@@ -157,11 +157,11 @@ post31.save!
 
   post42 = Post.new(description: 'Even the dark and the unknown does not scare me',
   author_id:1 )
-  file = EzDownload.open(  "https://spokanesymphony.org/core/files/spokanesymphony/events/2d48fcc4174e2b45494bd1e9392eb746.jpg")
+  file = EzDownload.open("https://spokanesymphony.org/core/files/spokanesymphony/events/2d48fcc4174e2b45494bd1e9392eb746.jpg")
   post42.photo.attach(io: file, filename: 'post42')
   post42.save!
   post32 = Post.new(description:"More magic", author_id: 3 )
-  file = EzDownload.open(  "http://s3.crackedcdn.com/phpimages/article/8/2/1/194821_v3.jpg")
+  file = EzDownload.open("http://s3.crackedcdn.com/phpimages/article/8/2/1/194821_v3.jpg")
   post32.photo.attach(io: file, filename: 'post32')
   post32.save!
 
