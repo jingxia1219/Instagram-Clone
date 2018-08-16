@@ -6,7 +6,6 @@ export const fetchUsers = () => (
 );
 
 export const updateUser = ( payload) => {
-  debugger;
   return $.ajax({
     method: 'patch',
     url: `/api/users/${payload.userId}`,

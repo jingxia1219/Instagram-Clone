@@ -1,6 +1,6 @@
 div.post-item {
   // display: flex;
-  padding-top: 18px;
+  padding-top: 13px;
   margin-left: 15%;
   width: 614px;
   border: 1px solid lightgrey;
@@ -16,10 +16,17 @@ img.post-picture {
   clear: left;
 }
 
-h6.post-user {
+h6.post-user, h6.post-user-top {
   font-weight:bold;
   margin-left: 20px;
   text-align: justify;
+}
+
+h6.post-user-top {
+  margin-top: 8px;
+  font-family: sans-serif;
+  font-weight: 15px;
+  color: black;
 }
 
 img.like-heart, img.comment-logo, img.bookmark-logo {
@@ -45,7 +52,7 @@ img.comment-logo{
 }
 
 img.post-picture {
-  margin-top: 20px;
+  margin-top: 13px;
 }
 
 img.preview {
@@ -55,7 +62,7 @@ img.preview {
 }
 
 
-h6.post-user, .post-description  {
+h6.post-user, .post-description, h6.post-user-top  {
   color: black;
   font-size: 15px;
   font-family: sans-serif;
