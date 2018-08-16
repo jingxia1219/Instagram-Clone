@@ -10,11 +10,6 @@ const mapStateToProps = (session) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   createPost: post => dispatch(createPost(post)),
-  // otherForm: (
-  //   <button onClick={() => dispatch(openModal('createPost'))}>
-  //     Create new post
-  //   </button>
-  // ),
   closeModal: () => dispatch(closeModal())
 });
 

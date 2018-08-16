@@ -4,12 +4,14 @@ import UploadPostContainer from '../posts/upload_post_container';
 import PostIndex from '../posts/post_index';
 import { Link } from 'react-router-dom';
 import Modal from '../modals/modal';
+import Follow from '../users/follow_container';
 
 const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) => {
 
   return (
     <div>
     <embed className='music' src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
+
     <hgroup className="header-group">
     <div className='dashboard-navbar'>
     <img className='insta-logo' src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" ></img>
@@ -26,8 +28,10 @@ const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) =>
       <img onClick={logout} className='compass' title="Log out" src='https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38780715_1771545332940673_3483777273776046080_n.jpg?_nc_cat=0&oh=3814f0874c97771db9801d8e4145847a&oe=5BFC818F'/>
     </div>
   </hgroup>
+
 <PostIndexContainer posts={posts}/>
-<h2>current user:{currentUser.username}</h2>
+
+<Follow />
   </div>
 );
 };
