@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 class PostIndex extends React.Component {
 
   componentDidMount(){
@@ -17,7 +17,10 @@ class PostIndex extends React.Component {
         <div key={`div-${post.id}`} className='post-item'>
           <li key={post.id}>
             <div className='post-header'>
-            <div className='profile-pic-small-container'><img className='profile-pic-small' key={`profile-pic-small-${post.id}`} src={this.props.users[post.author_id].avatarUrl} /></div>
+            <div className='profile-pic-small-container'>
+              <Link to={`/user/${post.author_id}`}>
+                <img className='profile-pic-small' key={`profile-pic-small-${post.id}`} src={this.props.users[post.author_id].avatarUrl} />
+          </Link></div>
             <h6 key={`post-user-${post.id}-1`} className='post-user-top'>{this.props.users[post.author_id].username}</h6>
           </div>
             <img  key={`img-${post.id}`} className="post-picture" src={post.photoUrl}/>

@@ -49,12 +49,12 @@ componentDidMount() {
           <div className='profile-picture-container'>
             <img className='default-user-icon'
               onClick={this.props.openModalProfile}
-              src={this.props.currentUser.avatarUrl} />
+              src={this.props.users[this.props.userId].avatarUrl} />
           </div>
           <div>
-          <h2 className='user-show-username'>{this.props.currentUser.username}</h2>
+          <h2 className='user-show-username'>{this.props.users[this.props.userId].username}</h2>
           <h2 className='bio'>Bio:</h2>
-          <h3 className='bio-text'>{this.props.currentUser.bio}</h3>
+          <h3 className='bio-text'>{this.props.users[this.props.userId].bio}</h3>
             <Modal/>
           </div>
         </div>
