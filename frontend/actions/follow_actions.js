@@ -3,9 +3,9 @@ export const RECEIVE_FOLLOWS = 'RECEIVE_FOLLOWERS';
 export const RECEIVE_FOLLOW = 'RECEIVE_FOLLOW';
 export const REMOVE_FOLLOW = 'REMOVE_FOLLOW';
 
-const removeFollow = (follow) => ({
+const removeFollow = (payload) => ({
   type: REMOVE_FOLLOW,
-  follow
+  payload
 });
 
 const receiveFollows = ( follows ) => ({
@@ -13,9 +13,9 @@ const receiveFollows = ( follows ) => ({
   follows
 });
 
-const receiveFollow = (follow) => ({
+const receiveFollow = (payload) => ({
   type: RECEIVE_FOLLOW,
-  follow
+  payload
 });
 
 export const fetchFollows = currentUser => dispatch => (
@@ -25,10 +25,10 @@ export const fetchFollows = currentUser => dispatch => (
 
 export const createFollow = followeeId => dispatch => (
   FollowApiUtil.createFollow(followeeId).
-  then( follow => dispatch(receiveFollow(follow)))
+  then( payload => dispatch(receiveFollow(payload)))
 );
 
-export const deleteFollow = follow => dispatch =>(
-  FollowApiUtil.deleteFollow(follow).
-  then( (follow )=> removeFollow(follow))
+export const deleteFollow = userId => dispatch =>(
+  FollowApiUtil.deleteFollow(userId).
+  then( (payload )=> removeFollow(payload))
 );

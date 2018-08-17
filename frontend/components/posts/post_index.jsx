@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentIndexContainer from '../comments/comments_index_container';
+
 class PostIndex extends React.Component {
 
   componentDidMount(){
@@ -28,7 +30,7 @@ class PostIndex extends React.Component {
             <img key={`cooment-${post.id}`} className='comment-logo' src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/39024220_1778594585569081_1067191603736608768_n.jpg?_nc_cat=0&oh=cdc88d2fca2d74c4e2d47fede3d606a5&oe=5BFFB142"/>
             <img key={`bookmark-${post.id}`} className='bookmark-logo' src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/39165058_1778626478899225_3517323601172758528_n.jpg?_nc_cat=0&oh=bfdb93bf357be2050ae934221ddaf26f&oe=5BC52A9C"/>
             <h6 key={`post-user-${post.id}`} className='post-user'>{this.props.users[post.author_id].username}:<span className='post-description'>{post.description}</span></h6>
-
+            <CommentIndexContainer post={post} />
           </li>
         </div>
         );

@@ -7,7 +7,17 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments
-  has_many :followings
+  has_many :follows
+
+  has_many :followers,
+  through: :follows,
+  source: :user
+
+  has_many :followees,
+  through: :follows,
+  source: :followee
+
+
   has_one_attached :profile_picture
 
   def ensure_profile_picture

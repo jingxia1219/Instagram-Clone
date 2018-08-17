@@ -8,9 +8,13 @@ const receiveUsers = (users) => ({
   users
 });
 
-const receiveUser = (user) => ({
+const receiveUser = ({user, posts, comments}) => ({
   type: RECEIVE_USER,
-  user
+  user,
+  posts,
+  comments,
+  followers: user.followers,
+  followees: user.followees
 });
 
 export const fetchUsers = () => dispatch => (

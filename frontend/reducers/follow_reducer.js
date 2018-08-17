@@ -7,15 +7,16 @@ import { merge } from 'lodash';
 const followReducer = ( state = {}, action ) => {
   Object.freeze(state);
   switch(action.type) {
+
     case RECEIVE_USER:
-      return action.followee || {};
+      return merge({}, action.users);
     case RECEIVE_FOLLOW:
-      return merge( {}, state, {[action.follow.id]: action.follow});
+      return merge( {}, state, {[action.payload.follow.id]: action.payload.follow});
     case RECEIVE_FOLLOWS:
       return merge( {}, action.follows);
     case REMOVE_FOLLOW:
       let newState = merge({}, state);
-      delete newState[action.follow];
+      delete newState[action.payload.follow.id];
       return newState;
     default:
       return state;
