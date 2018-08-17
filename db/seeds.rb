@@ -155,13 +155,13 @@ post30.photo.attach(io: file, filename: 'post30')
 post30.save!
 
 post31 = Post.new(description: 'It matters not what someone is born, but what they grow to be',
- author_id:1 )
+ author_id: demo_user.id  )
 file = EzDownload.open(  "https://vignette.wikia.nocookie.net/harrypotter/images/1/1a/Harry-Potter-Quotes-l.jpg/revision/latest?cb=20141218025905")
 post31.photo.attach(io: file, filename: 'post31')
 post31.save!
 
   post42 = Post.new(description: 'Even the dark and the unknown does not scare me',
-  author_id:1 )
+  author_id: demo_user.id  )
   file = EzDownload.open("https://spokanesymphony.org/core/files/spokanesymphony/events/2d48fcc4174e2b45494bd1e9392eb746.jpg")
   post42.photo.attach(io: file, filename: 'post42')
   post42.save!
