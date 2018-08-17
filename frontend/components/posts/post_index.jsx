@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CommentIndexContainer from '../comments/comments_index_container';
+import CommentIndexContainer from '../comments/comments_form_container';
 
 class PostIndex extends React.Component {
 
