@@ -17,7 +17,7 @@ class PostIndex extends React.Component {
       const posts = this.props.posts.map( post=> {
         return (
         <div key={`div-${post.id}`} className='post-item'>
-          <li key={post.id}>
+          <li className='post-container' key={post.id}>
             <div className='post-header'>
             <div className='profile-pic-small-container'>
               <Link to={`/user/${post.author_id}`}>

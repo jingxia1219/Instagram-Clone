@@ -12,10 +12,11 @@ form.comment-form{
 }
 
 input[type=text].comment-box {
+  padding-top: 15px;
   margin-top: 20px;
   margin-bottom: 0;
   border: 0;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid #F4F2F2;
   background: white;
   width: 570px;
   height: 20px;
