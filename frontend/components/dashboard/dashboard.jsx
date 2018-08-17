@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Modal from '../modals/modal';
 import Follow from '../users/follow_container';
 
-const personalGreeting = ({currentUser, logout, posts, fetchUser, modalOpen}) => {
+const personalGreeting = ({currentUser, logout, posts, modalOpen}) => {
 
   return (
     <div>

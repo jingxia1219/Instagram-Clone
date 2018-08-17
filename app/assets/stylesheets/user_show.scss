@@ -84,7 +84,8 @@ img.default-user-icon  {
   justify-content: center;
   display: inline-flex;
   margin: -3px 94px 70px 94px;
-  width: 155px;
+  min-width: 155px;
+  max-width: 155px;
   height: 155px;
   border-radius: 50%;
   overflow: hidden;

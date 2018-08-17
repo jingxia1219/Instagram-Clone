@@ -8,19 +8,15 @@ import { Link } from 'react-router-dom';
 import Modal from '../modals/modal';
 
 class UserProfile extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: []
-    };
-  }
 
 componentDidMount() {
   this.props.fetchPosts();
+  this.props.fetchUser(this.props.userId);
 }
 
     render() {
-      const postsByUser =   this.props.postsByUser.map( post =>
+      // debugger;
+      const postsByUser = this.props.postsByUser.map( post =>
         <div key={`picture-box-key-${post.id}`} className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
       return (
@@ -51,9 +47,11 @@ componentDidMount() {
               onClick={this.props.openModalProfile}
               src={this.props.users[this.props.userId].avatarUrl} />
           </div>
-          <div>
+          <div className='bio'>
+            <div>
           <h2 className='user-show-username'>{this.props.users[this.props.userId].username}</h2>
           <h2 className='bio'>Bio:</h2>
+          </div>
           <h3 className='bio-text'>{this.props.users[this.props.userId].bio}</h3>
             <Modal/>
           </div>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { fetchPosts } from '../../actions/posts/post_actions';
 import React from 'react-redux';
 import UserShow from './user_show';
@@ -16,6 +16,7 @@ const mapStateToProps = ({entities, session}, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  fetchUsers: () => dispatch(fetchUsers()),
   fetchUser: (id) => dispatch(fetchUser(id)),
   logout: () => dispatch(logout()),
   fetchPosts: () => dispatch(fetchPosts()),
