@@ -20,7 +20,7 @@
 
 .iphone-screen {
   position: absolute;
-  margin-left: 190px;
+  margin-left: 215px;
   margin-right: 20px;
   width: 440px;
   margin-top: 10px;
@@ -33,10 +33,13 @@
   height: 422px;
   z-index: 3;
   opacity: 0.95;
-  margin-left: 332px;
+  margin-left: 357px;
   margin-top: 103px;
 }
 
+div.post-body {
+  top: 30px;
+}
 
 .instapic-text{
   height: 65px;
@@ -80,7 +83,7 @@ body{
   padding-bottom: 38px;
 }
 .seperate-box {
-  margin-top: 625px;
+  margin-top: 600px;
   border: 1px solid lightgrey;
   background: white;
   width: 350px;
@@ -99,8 +102,8 @@ body{
 }
 
 .copy-right-bold {
-  font-weight: 550;
-  opacity: 0.95;
+  font-weight: 500;
+  opacity: 0.85;
   margin-top: 5px;
 }
 
@@ -165,3 +168,4 @@ input[type=submit].disabled{
   font-family: sans-serif;
 
 }
+

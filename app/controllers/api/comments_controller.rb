@@ -2,14 +2,16 @@ class Api::CommentsController < ApplicationController
   before_action :require_login
 
   def index
-    @post = Post.find(params[:post_id])
-    @comments = @post.comments
+    # @post = Post.find(params[:post_id])
+    @comments = Comment.all
   end
 
   def create
+    # p @comment
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.post_id = params[:post_id]
+
+    @comment.post_id = params[:comment][:postId]
     if @comment.save
       render :show
     else
@@ -25,6 +27,6 @@ class Api::CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:post_id, :body)
+    params.require(:comment).permit(:body)
   end
 end

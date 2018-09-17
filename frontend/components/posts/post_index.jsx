@@ -37,7 +37,7 @@ class PostIndex extends React.Component {
       });
     return (
       <div>
-        <ul>
+        <ul className='post'>
           {posts}
         </ul>
       </div>

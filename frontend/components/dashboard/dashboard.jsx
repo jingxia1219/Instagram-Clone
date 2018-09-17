@@ -9,8 +9,8 @@ import Follow from '../users/follow_container';
 const personalGreeting = ({currentUser, logout, posts, modalOpen}) => {
 
   return (
-    <div>
-    <embed className='music' src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" />
+    <div className='post-body'>
+    {/* <embed className='music' src="http://www.dan-dare.org/Dan%20Potter/HarryPotterPhilosophersStoneTheme.mp3" width="0"  loop="false" autostart="true" hidden="true" /> */}
 
     <hgroup className="header-group">
     <div className='dashboard-navbar'>

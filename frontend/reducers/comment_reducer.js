@@ -8,7 +8,7 @@ const commentReducer = ( state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_COMMENT:
-      return merge({}, state, {[action.comments.id]:action.comments});
+      return merge({}, state, {[action.comment.id]:action.comment});
     case RECEIVE_COMMENTS:
       return merge({}, action.comments);
     case REMOVE_COMMENT:

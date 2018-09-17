@@ -36,6 +36,7 @@ demo(e) {
 }
 
   renderErrors(){
+    debugger
     return (<ul>
       {this.props.errors.map( (error,i ) =>
         <li key={`${i}`}>

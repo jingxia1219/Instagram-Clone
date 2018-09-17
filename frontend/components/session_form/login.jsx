@@ -91,9 +91,9 @@ class SessionForm extends React.Component {
             <input className='session-submit' type='submit'
               value={this.props.formType} />
             <br/>
-            <p className='copy-right'>By signing up, you agree to our
+            <span className='copy-right'>By signing up, you agree to our
             <p className='copy-right-bold'>Terms, Data Policy and Cookies <br/> Policy.</p>
-          </p>
+          </span>
           </div>
         </form>
       </div>
