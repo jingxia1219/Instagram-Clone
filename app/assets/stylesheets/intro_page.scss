@@ -12,19 +12,34 @@
   font-family: cursive;
 }
 
+.intro-container{
+  margin-top: 6.5%;
+  margin-left: 3%;
+  display: flex ;
+}
+
 .iphone-screen {
   position: absolute;
   margin-left: 190px;
   margin-right: 20px;
   width: 440px;
-  margin-top: 110px;
+  margin-top: 10px;
   z-index: 2;
 }
+
+.pic-one {
+  position: absolute;
+  width: 240px;
+  height: 422px;
+  z-index: 3;
+  opacity: 0.95;
+  margin-left: 332px;
+  margin-top: 103px;
+}
+
+
 .instapic-text{
   height: 65px;
-}
-.intro-container{
-  display: flex ;
 }
 
 ul {
@@ -149,14 +164,4 @@ input[type=submit].disabled{
   font-size: 20px;
   font-family: sans-serif;
 
-}
-
-.pic-one {
-  position: absolute;
-  width: 240px;
-  height: 422px;
-  z-index: 3;
-  opacity: 0.95;
-  margin-left: 332px;
-  margin-top: 203px;
 }
