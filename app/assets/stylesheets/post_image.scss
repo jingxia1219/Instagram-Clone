@@ -38,9 +38,26 @@ img.like-heart, img.comment-logo, img.bookmark-logo {
 }
 
 li.comment-item {
-  margin-top: 5px;
+  margin-top: 6px;
   display: flex;
-  align-content: space-between;
+  padding-right: 18px;
+  justify-content: space-between;
+}
+
+img.comment-delete-logo:hover {
+  cursor: pointer;
+}
+
+img.comment-delete-logo {
+  height: 15px;
+  weight: auto;
+  margin-top: 1px;
+  opacity: 0.7;
+}
+
+.comment-line {
+  display: flex;
+
 }
 
 img.like-heart:hover, img.comment-logo:hover, img.bookmark-logo:hover  {

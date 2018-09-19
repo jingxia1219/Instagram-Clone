@@ -30,5 +30,5 @@ export const createComment = comment => dispatch => (
 
 export const deleteComment = commentId => dispatch => (
   APIUtil.deleteComment(commentId)
-  .then(res => dispatch(deleteComment(commentId)))
+  .then(res => dispatch(removeComment(commentId)))
 );

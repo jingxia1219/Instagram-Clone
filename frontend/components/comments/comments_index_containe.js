@@ -12,8 +12,8 @@ const mapStateToProps = ({entities, session}, {post}) => {
   }
 };
 
-const mapDispatchToProps = dispatch => ({
-  deleteComment: comment => dispatch(deleteComment(comment))
+const mapDispatchToProps = (dispatch) => ({
+  deleteComment: commentId => dispatch(deleteComment(commentId))
 });
 
 export default connect(mapStateToProps,
