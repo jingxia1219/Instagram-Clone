@@ -37,6 +37,12 @@ img.like-heart, img.comment-logo, img.bookmark-logo {
   margin-left: 18px;
 }
 
+li.comment-item {
+  margin-top: 5px;
+  display: flex;
+  align-content: space-between;
+}
+
 img.like-heart:hover, img.comment-logo:hover, img.bookmark-logo:hover  {
 
   transform: scale(1.2);

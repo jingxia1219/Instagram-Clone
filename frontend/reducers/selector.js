@@ -14,7 +14,6 @@ export const sortPosts = posts => {
 };
 
 export const sortComments = (comments, postId) => {
-  console.log("postIdinSorter:",postId)
   let commentsByPost = Object.values(comments).filter( comment => comment.post_id === postId);
   commentsByPost = commentsByPost.sort( (a,b) => new Date(a.createAt) - new Date(b.createdAt));
   return commentsByPost;
