@@ -1,4 +1,5 @@
 .dashboard-navbar {
+  display: flex;
   margin-left: 10%;
   text-align: justify;
   border-bottom: 1px solid #E9E8E8;
@@ -84,14 +85,16 @@ input[type=text].search-box, .search-img {
   z-index: 1;
 }
 input[type=text].search-box {
+  margin-top: 0;
   width: 240px;
   height: 25px;
   cursor: not-allowed;
+  margin-bottom: 19px;
 }
 .search-img {
   z-index: 2;
   height: 35px;
-  margin-top: 20px;
+  margin-top: 0;
   margin-left: 260px;
   opacity: 0.4;
 }
