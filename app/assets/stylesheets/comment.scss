@@ -9,6 +9,7 @@ input[type=text].comment-box:focus {
 form.comment-form{
   margin-right: 15px;
   max-height: 75px;
+  z-index: 5;
 }
 
 input[type=text].comment-box {
@@ -23,3 +24,4 @@ input[type=text].comment-box {
   margin-left: 15px;
   margin-right: 0px;
 }
+

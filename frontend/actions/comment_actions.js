@@ -13,8 +13,8 @@ const receiveComments = (comments) => ({
   comments
 });
 
-const removeComment = (commentId) => ({
-  type: RECEIVE_COMMENT,
+const removeComment = commentId => ({
+  type: REMOVE_COMMENT,
   commentId
 });
 
@@ -28,7 +28,7 @@ export const createComment = comment => dispatch => (
   .then( comment => dispatch(receiveComment(comment)))
 );
 
-export const deleteComment = commentId => dispatch => (
-  APIUtil.deleteComment(commentId)
-  .then(res => dispatch(removeComment(commentId)))
+export const deleteComment = comment => dispatch => (
+  APIUtil.deleteComment(comment)
+  .then(res => dispatch(removeComment(comment.id)))
 );

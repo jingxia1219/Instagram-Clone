@@ -3,7 +3,7 @@
   margin-left: 10%;
   text-align: justify;
   border-bottom: 1px solid #E9E8E8;
-  z-index: 5;
+  // z-index: 99;
   margin-bottom: 0;
 }
 
@@ -82,7 +82,7 @@ input[type=text].search-box, .search-img {
   margin-left: 250px;
   height: 24px;
   align-self: center;
-  z-index: 1;
+  // z-index: 99;
 }
 input[type=text].search-box {
   margin-top: 0;
@@ -92,7 +92,7 @@ input[type=text].search-box {
   margin-bottom: 19px;
 }
 .search-img {
-  z-index: 2;
+  // z-index: 99;
   height: 35px;
   margin-top: 0;
   margin-left: 260px;
