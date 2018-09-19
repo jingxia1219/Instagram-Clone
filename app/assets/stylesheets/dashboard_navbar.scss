@@ -42,18 +42,23 @@ button.create-post-modal-dashboard {
 .compass {
   position: absolute;
   height: 30px;
-  margin-left: 750px;
+  margin-left: 860px;
 }
 
-.user-icon, img.in-user-icon {
+.user-icon {
   position: absolute;
-  margin-left: 850px;
+  margin-left: 820px;
+  height: 28px;
+}
+img.in-user-icon {
+  position: absolute;
+  margin-left: 980px;
   height: 28px;
 }
 
 .empty-heart {
   position: fixed;
-  margin-left: 800px;
+  margin-left: 920px;
   height: 28px;
 }
 
