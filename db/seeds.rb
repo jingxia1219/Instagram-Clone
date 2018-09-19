@@ -20,20 +20,29 @@ user2 = User.create(username:'Ron_Weasley', password: '123456', email: 'Ron_Weas
   file = EzDownload.open("https://nerdist.com/wp-content/uploads/2017/01/harry-potter.jpg")
   post3.photo.attach(io: file, filename: 'post3')
   post3.save!
+  comment1 = Comment.new(user_id: user1.id, post_id: post3.id, body: 'Nice view, Harry!')
+  comment1.save! 
+
+
   post4 = Post.new(description: "What Hogwarts looks like at night!",  author_id: user1.id)
   file = EzDownload.open("http://cdn.playbuzz.com/cdn/7aa950b4-eaa0-417d-93af-3bd332dc8086/5e549d0d-aad1-4ec1-96c9-31e36f08af8c.jpg")
   post4.photo.attach(io: file, filename: 'post4')
   post4.save!
-
+  comment2 = Comment.new(user_id: demo_user.id, post_id: post4.id, body: 'Nice pic, Hermione!')
+  comment2.save! 
   post5 = Post.new(description: "Man, spider is truly my worst nightmare!",  author_id: user2.id)
   file = EzDownload.open("http://cdn01.cdn.justjaredjr.com/wp-content/uploads/2011/04/hp-ron/rupert-grint-ron-weasley-03.JPG")
   post5.photo.attach(io: file, filename: 'post5')
   post5.save!
+  comment3 = Comment.new(user_id: user1.id, post_id: post4.id, body: 'Poor Ron 😂')
+  comment3.save!
 
   post6 = Post.new(description: "I love magic!",  author_id: user1.id)
   file = EzDownload.open("https://static3.srcdn.com/wordpress/wp-content/uploads/2017/01/Hermione-brews-Polyjuice.jpg")
   post6.photo.attach(io: file, filename: 'post6')
   post6.save!
+  comment4 = Comment.new(user_id: user3.id, post_id: post6.id, body: 'Help with my magic202 class so i dont fail it')
+  comment4.save!
 
   post7 = Post.new(description:"Here's the train, I can't wait to see Harry and Hermione!", author_id: user2.id)
   file = EzDownload.open("https://images.unsplash.com/photo-1475353152807-97f4e3315977?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cab931e5c305b7a6718c01d483d4be06&w=1000&q=80")
@@ -230,3 +239,4 @@ post47 = Post.new(description:"Graduation!", author_id: user1.id)
 file = EzDownload.open(  "https://www.visitbritainshop.com/world/~/media/images/articles/harry%20potter%20filming%20locations%20guide/pi-great-hall.ashx?h=377&w=670")
 post47.photo.attach(io: file, filename: 'post47')
 post47.save!
+

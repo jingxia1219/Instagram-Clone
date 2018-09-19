@@ -4,7 +4,6 @@ import { createComment, deleteComment, fetchComments } from '../../actions/comme
 const mapStateToProps = ({session, entities}, ownProps) => {
 
 // console.log(ownProps.post.id);
-
 return ({
   comments: entities.comments,
   userId: session.id,

@@ -7,7 +7,8 @@ import PostIndex from './post_index';
 const mapStateToProps = ({entities}) => ({
   posts: Object.values(entities.posts),
   photoUrl: null,
-  users: entities.users
+  users: entities.users,
+  comments: entities.comments
 });
 
 const mapDispatchToProps = (dispatch) => ({

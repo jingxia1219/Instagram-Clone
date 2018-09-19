@@ -14,12 +14,13 @@ export const sortPosts = posts => {
 };
 
 export const sortComments = (comments, postId) => {
-  let commentsByPost = Object.values(comments).filter( comment => comment.postId === postId);
+  console.log("postIdinSorter:",postId)
+  let commentsByPost = Object.values(comments).filter( comment => comment.post_id === postId);
   commentsByPost = commentsByPost.sort( (a,b) => new Date(a.createAt) - new Date(b.createdAt));
   return commentsByPost;
 };
 
-export const filterFollows = (follow, userId) => {
+export const filterFollows = (follow, userId) => {to 
   let values = Object.values(follow);
   return values.filter( follow => follow.userId === userId);
 };
