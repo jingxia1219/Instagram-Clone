@@ -13,7 +13,7 @@ const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER,
 });
 const receiveErrors = (errors) => {
-  debugger
+  // debugger
   return ({
   type: RECEIVE_SESSION_ERRORS,
   errors
@@ -31,7 +31,7 @@ export const signup = (user) => (dispatch) =>(
   .then(
      user=> dispatch(receiveCurrentUser(user)),
      err => (
-    dispatch(receiveErrors(err))
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
