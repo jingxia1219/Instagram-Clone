@@ -38,7 +38,7 @@ img.like-heart, img.comment-logo, img.bookmark-logo {
 }
 
 li.comment-item {
-  margin-top: 6px;
+  margin-top: 0px;
   display: flex;
   padding-right: 18px;
   justify-content: space-between;
@@ -94,6 +94,10 @@ h6.post-user, .post-description, h6.post-user-top  {
   font-size: 15px;
   font-family: sans-serif;
   clear: left;
+}
+
+h6.post-user {
+  margin-bottom:4px;
 }
 
 .post-description {
