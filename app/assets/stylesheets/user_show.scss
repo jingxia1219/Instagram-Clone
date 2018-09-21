@@ -60,8 +60,12 @@ img.profile-pic-small {
   width: auto;
 }
 .post-header {
+  width: 593px;
+  padding-bottom: 9px;
   display: inline-flex;
   float: left;
+  // margin-bottom: 13px;
+  border-bottom: 1px solid lightgray;
 }
 
 .profile-pic-small-container {
@@ -90,7 +94,6 @@ img.default-user-icon  {
   height: 155px;
   border-radius: 50%;
   overflow: hidden;
-  // background-color: blue;
 }
 
 h2.user-show-username {

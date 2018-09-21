@@ -2,7 +2,7 @@ div.post-item {
   // display: flex;
   padding-top: 13px;
   margin-left: 10%;
-  width: 614px;
+  width: 593px;
   border: 1px solid lightgrey;
   text-align: center;
   margin-bottom: 60px;
@@ -12,7 +12,7 @@ div.post-item {
 }
 
 img.post-picture {
-  max-width: 614px;
+  max-width: 593px;
   clear: left;
 }
 
@@ -79,13 +79,17 @@ img.comment-logo{
 }
 
 img.post-picture {
-  margin-top: 13px;
+  display: block;
+  margin: auto;
+  // margin-top: 13px;
+  clear: both;
+  max-height: 593px;
+  max-width: 593px;
 }
 
 img.preview {
   max-width: 400px;
   float: right;
-
 }
 
 
