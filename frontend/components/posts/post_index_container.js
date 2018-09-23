@@ -4,12 +4,16 @@ import {fetchPost, deletePost, fetchPosts, createPost} from '../../actions/posts
 import { fetchUsers } from '../../actions/user_actions';
 import PostIndex from './post_index';
 
-const mapStateToProps = ({entities}) => ({
+const mapStateToProps = ({entities, session}) => {
+  console.log(session);
+  return {
   posts: Object.values(entities.posts),
   photoUrl: null,
   users: entities.users,
-  comments: entities.comments
-});
+  comments: entities.comments,
+  currentUser: entities.users[session.id]
+  }
+};
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPost: (id) => dispatch(fetchPost(id)),

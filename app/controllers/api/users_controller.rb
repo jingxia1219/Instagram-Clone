@@ -6,6 +6,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    # return unless current_user == @user 
     # debugger
     # @user.profile_picture.attach(params[:user][:avatarUrl])
     if @user.update_attributes(user_params)

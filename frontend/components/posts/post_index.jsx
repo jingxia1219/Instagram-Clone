@@ -38,13 +38,21 @@ class PostIndex extends React.Component {
         </div>
         );
       });
-    return (
-      <div>
-        <ul className='post'>
-          {posts}
-        </ul>
-      </div>
-    );
+    return <div className="post-page">
+        <span className="featured-user">
+          <div className='current-user-featured'>
+            <span className="current-user-icon-container">
+            <Link to={`/user/${this.props.currentUser.id}`}>
+              <img className="current-user-icon" src={this.props.currentUser.avatarUrl} />
+              </Link>
+            </span>
+            <span className="user-name-text">
+              {this.props.currentUser.username}
+            </span>
+          </div>
+        </span>
+        <ul className="post">{posts}</ul>
+      </div>;
 
   }
 }

@@ -2,7 +2,7 @@ div.post-item {
   // display: flex;
   padding-top: 13px;
   margin-left: 10%;
-  width: 593px;
+  width: 614px;
   border: 1px solid lightgrey;
   text-align: center;
   margin-bottom: 60px;
@@ -12,7 +12,7 @@ div.post-item {
 }
 
 img.post-picture {
-  max-width: 593px;
+  max-width: 614px;
   clear: left;
 }
 
@@ -20,6 +20,12 @@ h6.post-user, h6.post-user-top {
   font-weight:bold;
   margin-left: 20px;
   text-align: justify;
+}
+
+span.user-name-text {
+  display: block;
+  margin-top: 9px;
+  font-family: sans-serif;
 }
 
 h6.post-user-top {
@@ -83,8 +89,8 @@ img.post-picture {
   margin: auto;
   // margin-top: 13px;
   clear: both;
-  max-height: 593px;
-  max-width: 593px;
+  max-height: 614px;
+  max-width: 614px;
 }
 
 img.preview {
@@ -92,6 +98,41 @@ img.preview {
   float: right;
 }
 
+img.current-user-icon {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+}
+
+.current-user-icon-container {
+  border: 1px solid lightgrey;
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+div.post-page {
+   display: flex; 
+   align-content: space-between;
+}
+
+div.current-user-featured {
+  width: 293px; 
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+span.featured-user {
+  margin-top: 140px;
+  position: fixed;
+  margin-left: 870px;
+  align-content: center;
+  text-align: center;
+}
 
 h6.post-user, .post-description, h6.post-user-top  {
   color: black;

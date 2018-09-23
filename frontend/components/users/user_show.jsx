@@ -41,7 +41,7 @@ componentDidMount() {
           </hgroup>
           <div className="profile-body">
             <div className="profile-picture-container">
-              <img className="default-user-icon" onClick={this.props.openModalProfile} src={this.props.users[this.props.userId].avatarUrl} />
+              <img className="default-user-icon" onClick={() => this.props.openModalProfile().then( ()=> this.setState({}))} src={this.props.users[this.props.userId].avatarUrl} />
             </div>
             <div className="bio">
               <div>
