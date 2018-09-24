@@ -5,7 +5,7 @@ InstaPic is an instant picture sharing web application inspired by Instagram. It
 ##Preview
 
 ### Signup Page
-![Instapic](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/39390580_1785902024838337_3278746925318275072_n.jpg?_nc_cat=0&oh=272c84e6549a37d7da23105e6f7b41d7&oe=5C35EC60)
+![Instapic](https://media.giphy.com/media/tsWVpfKnn1k1EFfLF2/giphy.gif)
 ### Uploading new post on the Dashboard Page
 ![Instapic](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/39339066_1785902378171635_5651612890596114432_n.jpg?_nc_cat=0&oh=61b05e63f8138634c8ac55761a04993d&oe=5C021E9E)
 
@@ -56,7 +56,7 @@ def reset_session_token
 ## Key Features
 * On the splash page, the sign up box features a DEMO login button, which allows users to quickly access the dashboard page, and user profile pages without signing up.
 
-![Instapic](https://media.giphy.com/media/2tKAerIBgFl50wkoKc/giphy.gif)
+![Instapic](https://media.giphy.com/media/fdYdHqDlBM3DHHNlBe/giphy.gif)
 * Logged in users and DEMO user can make new post on either the dashboard page or their profile page. Users can preview the post picture in the pop up modal before uploading it.
 
 ![Instapic](https://media.giphy.com/media/5Ys3DrqeVlxGWMaWvQ/giphy.gif)
@@ -65,7 +65,7 @@ def reset_session_token
 ![Instapic](https://media.giphy.com/media/1AIPgDD8CmrxvE6ui5/giphy.gif)
 * Users can't hack into unauthorized pages by manipulating the URL. They will be taken back to the signup page if they didn't log in or the dashboard page if they are logged in.
 
-![Instapic](https://media.giphy.com/media/cYyoJj7NWqVpZ2CdWd/giphy.gif)
+![Instapic](https://media.giphy.com/media/8YTizHFFcWBqxuHjIe/giphy.gif)
 
 ## Upcoming features
 * Be able to follow other users
