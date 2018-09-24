@@ -103,9 +103,18 @@ img.current-user-icon {
   width: auto;
   cursor: pointer;
 }
-
-.current-user-icon-container {
-  border: 1px solid lightgrey;
+span.friend {
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 100;
+  opacity: 0.8;
+  color: gray;
+}
+.current-user-icon-container, .current-user-icon-container-main {
+  margin-top: 8px;
+  border: 2px solid #FB8B0A;
   display: inline-flex;
   width: 55px;
   height: 55px;
@@ -113,6 +122,10 @@ img.current-user-icon {
   overflow: hidden;
   justify-content: center;
   margin-right: 10px;
+}
+
+.current-user-icon-container-main {
+  border: 1px solid lightgray;
 }
 
 div.post-page {

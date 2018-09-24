@@ -5,7 +5,7 @@ import { fetchUsers } from '../../actions/user_actions';
 import PostIndex from './post_index';
 
 const mapStateToProps = ({entities, session}) => {
-  console.log(session);
+  // console.log(session);
   return {
   posts: Object.values(entities.posts),
   photoUrl: null,

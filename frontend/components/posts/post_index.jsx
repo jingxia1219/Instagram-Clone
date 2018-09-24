@@ -15,6 +15,25 @@ class PostIndex extends React.Component {
     if (Object.keys(this.props.posts).length < 1) return null;
     if (Object.keys(this.props.users).length < 2) return null;
     // if ( !this.props.users) return null;
+    // let fiveUsers;
+
+
+    const featuredUsers = Object.values(this.props.users).map( user => {
+      if (user === this.props.currentUser) {return null;} 
+      // debugger;
+      return (
+      <div className="featured-user-icon" key={`featured-user-icon${user.id}`} >
+          <li key={`li-${user.id}`}>
+            <span className="current-user-icon-container">
+            <Link to={`/user/${user.id}`}>
+              <img className="current-user-icon" src={user.avatarUrl} />
+            </Link>
+            </span>
+        </li>
+      </div>
+      );
+    });
+
       const posts = this.props.posts.map( post=> {
         return (
         <div key={`div-${post.id}`} className='post-item'>
@@ -38,10 +57,11 @@ class PostIndex extends React.Component {
         </div>
         );
       });
-    return <div className="post-page">
+    return (
+    <div className="post-page">
         <span className="featured-user">
           <div className='current-user-featured'>
-            <span className="current-user-icon-container">
+            <span className="current-user-icon-container-main">
             <Link to={`/user/${this.props.currentUser.id}`}>
               <img className="current-user-icon" src={this.props.currentUser.avatarUrl} />
               </Link>
@@ -50,9 +70,13 @@ class PostIndex extends React.Component {
               {this.props.currentUser.username}
             </span>
           </div>
+          <span className='friend'>
+             Featured Users
+          </span>
+          <ul className='featured-user'>{featuredUsers}</ul>
         </span>
         <ul className="post">{posts}</ul>
-      </div>;
+    </div>);
 
   }
 }
