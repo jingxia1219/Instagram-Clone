@@ -14,6 +14,8 @@ componentDidMount() {
   this.props.fetchUser(this.props.userId);
 }
 
+
+
     render() {
       // debugger;
       const postsByUser = this.props.postsByUser.map( post =>
