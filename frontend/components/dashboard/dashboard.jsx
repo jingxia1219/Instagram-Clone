@@ -29,7 +29,6 @@ const personalGreeting = ({currentUser, logout, posts, modalOpen}) => {
 
       <PostIndexContainer posts={posts} />
 
-      <Follow />
     </div>;
 };
 
