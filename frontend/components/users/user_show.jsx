@@ -17,7 +17,6 @@ componentDidMount() {
 
 
     render() {
-      // debugger;
       const postsByUser = this.props.postsByUser.map( post =>
         <div key={`picture-box-key-${post.id}`} className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );

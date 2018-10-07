@@ -8,7 +8,8 @@ class CreatePost extends React.Component {
     this.state =  {
       description: "",
       photoUrl: null,
-      photoFile: null
+      photoFile: null,
+      uploaded: false
     };
     this.filename = null;
   }
@@ -25,7 +26,7 @@ class CreatePost extends React.Component {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     const formData = new FormData();
     formData.append('post[description]', this.state.description);
     formData.append('post[photoUrl]', this.state.photoUrl);
@@ -40,7 +41,8 @@ class CreatePost extends React.Component {
       photoUrl: null,
       photoFile: null
     }, this.props.closeModal
-  );
+    );
+    this.setState({uploaded: true});
 
   }
   handleInput(e) {

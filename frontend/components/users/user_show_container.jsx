@@ -8,12 +8,15 @@ import { logout } from  '../../actions/session_actions';
 import {selectPostByUser} from '../../reducers/selector';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = ({entities, session}, ownProps) => ({
+const mapStateToProps = ({entities, session}, ownProps) => {
+  console.log("ownprops,", ownProps);
+  return {
   users: entities.users,
   currentUser: entities.users[session.id],
   postsByUser: selectPostByUser(entities, ownProps.match.params.userId ),
   userId: ownProps.match.params.userId
-});
+}
+};
 
 const mapDispatchToProps = (dispatch) => ({
   fetchUsers: () => dispatch(fetchUsers()),

@@ -10,10 +10,10 @@ const receivePosts = ({posts, comments}) => ({
   comments
 });
 
-const receivePost = ({post, comments }) => ({
+const receivePost = ({post}) => ({
   type: RECEIVE_POST,
-  post,
-  comments
+  post
+  // comments
 });
 
 const removePost = (postId) => ({
@@ -29,7 +29,7 @@ export const fetchPosts = () => dispatch => (
   PostApiUtil.fetchPosts().then( posts => dispatch(receivePosts({posts})))
 );
 
-export const createPost = (post) => (dispatch) => (
+export const createPost = post => dispatch => (
   PostApiUtil.createPost(post).then( post => dispatch(receivePost(post)))
 );
 
