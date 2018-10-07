@@ -2,7 +2,6 @@ import{ connect} from 'react-redux';
 import CommentIndex from './comments_form';
 import { createComment, deleteComment, fetchComments } from '../../actions/comment_actions';
 const mapStateToProps = ({session, entities}, ownProps) => {
-
 // console.log(ownProps.post.id);
 return ({
   comments: entities.comments,

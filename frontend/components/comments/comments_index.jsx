@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class CommentIndex extends React.Component {
     handleDelete(comment, e) {
         // e.preventDefault();
-        console.log(comment);
+        // console.log(comment);
         
         this.props.deleteComment(comment);
     }

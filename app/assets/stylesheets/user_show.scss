@@ -81,8 +81,8 @@ img.profile-pic-small {
 
 img.default-user-icon  {
   align-self: center;
-  height: 205px;
-  width: auto;
+  width: 170px;
+  height: auto;
 }
 
 .profile-picture-container {
@@ -90,9 +90,9 @@ img.default-user-icon  {
   justify-content: center;
   display: inline-flex;
   margin: -3px 94px 70px 94px;
-  min-width: 155px;
-  max-width: 155px;
-  height: 155px;
+  min-width: 170px;
+  max-width: 170px;
+  height: 170px;
   border-radius: 50%;
   overflow: hidden;
 }
