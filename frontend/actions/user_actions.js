@@ -13,8 +13,6 @@ const receiveUser = ({user, posts, comments}) => ({
   user,
   posts,
   comments,
-  followers: user.followers,
-  followees: user.followees
 });
 
 export const fetchUsers = () => dispatch => (

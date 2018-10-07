@@ -10,13 +10,18 @@ import Modal from '../modals/modal';
 class UserProfile extends React.Component {
 
 componentDidMount() {
-  this.props.fetchPosts();
+  console.log('printing?');
+  this.props.fetchUsers();
   this.props.fetchUser(this.props.userId);
+  this.props.fetchPosts();
+  console.log("this.props.userId?");
+  window.scrollTo(0,0);
 }
 
 
 
     render() {
+      if (!this.props.users[this.props.userId]) return null;
       const postsByUser = this.props.postsByUser.map( post =>
         <div key={`picture-box-key-${post.id}`} className={`picture-box-${post.id}`}><img className='user-show-post' key={`user-show-post-${post.id}`} src={post.photoUrl} /></div>
        );
@@ -42,7 +47,7 @@ componentDidMount() {
           </hgroup>
           <div className="profile-body">
             <div className="profile-picture-container">
-              <img className="default-user-icon" onClick={() => this.props.openModalProfile().then( ()=> this.setState({}))} src={this.props.users[this.props.userId].avatarUrl} />
+              <img className="default-user-icon" onClick={() => this.props.openModalProfile()} src={this.props.users[this.props.userId].avatarUrl} />
             </div>
             <div className="bio">
               <div>

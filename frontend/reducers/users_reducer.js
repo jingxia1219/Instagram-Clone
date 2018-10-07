@@ -9,6 +9,7 @@ const usersReducer = ( state={}, action ) => {
     // debugger;
       return merge({}, state, {[action.user.id]: action.user});
     case RECEIVE_USERS:
+    console.log(action.users);
       return merge({}, action.users);
     case RECEIVE_USER:
       return merge({}, state, {[action.user.id]: action.user});

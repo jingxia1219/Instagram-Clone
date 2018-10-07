@@ -39,6 +39,7 @@ class UpdateUserProfile extends React.Component {
       photoFile: null,
     }, this.props.closeModal
    );
+   this.setState({});
   }
 
   render() {

@@ -9,7 +9,7 @@ import {selectPostByUser} from '../../reducers/selector';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({entities, session}, ownProps) => {
-  console.log("ownprops,", ownProps);
+  // console.log("ownprops,", ownProps);
   return {
   users: entities.users,
   currentUser: entities.users[session.id],
