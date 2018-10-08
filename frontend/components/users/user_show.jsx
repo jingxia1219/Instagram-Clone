@@ -14,7 +14,7 @@ componentDidMount() {
   this.props.fetchUsers();
   this.props.fetchUser(this.props.userId);
   this.props.fetchPosts();
-  console.log("this.props.userId?");
+  console.log(this.props.userId);
   window.scrollTo(0,0);
 }
 

@@ -15,10 +15,9 @@ export const updateUser = ( payload) => {
   });
 };
 
-export const fetchUser = (user) => (
+export const fetchUser = (id) => (
   $.ajax({
     method: 'get',
-    url: `/api/users/${user.id}`,
-    data: { user }
+    url: `/api/users/${id}`,
   })
 );
