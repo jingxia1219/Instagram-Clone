@@ -83,6 +83,10 @@ img.in-user-icon {
   border-right: 1px solid grey;
 }
 
+.insta-logo:hover {
+  cursor: pointer;
+}
+
 input[type=text].search-box, .search-img {
   position: absolute;
   font-size: 13px;
@@ -109,6 +113,10 @@ input[type=text].search-box {
 
 .instapic-small{
   margin-left: 20px;
+}
+
+.instapic-small:hover {
+  cursor: pointer;
 }
 
 .header-group {

@@ -28,7 +28,9 @@ componentDidMount() {
       return <div>
           <hgroup className="header-group">
             <div className="dashboard-navbar">
-              <img className="insta-logo" src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" />
+              <Link to="/dashboard">
+                <img className="insta-logo" src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" />
+              </Link>
               <Link to="/dashboard">
                 <img className="user-show-instapic-small" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38749082_1769735009788372_243286579940950016_n.jpg?_nc_cat=0&oh=6523cec7952760d9608eb243a59981c1&oe=5C121671" />
               </Link>
