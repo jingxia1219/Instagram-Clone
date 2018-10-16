@@ -47,14 +47,14 @@ button.create-post-modal-dashboard:hover {
 .compass {
   position: absolute;
   height: 27px;
-  margin-left: 940px;
+  margin-left: 900px;
   background-color: white;
   opacity: 0.7;
 }
 
 .user-icon {
   position: absolute;
-  margin-left: 900px;
+  margin-left: 660px;
   height: 28px;
 }
 img.in-user-icon {
@@ -67,6 +67,7 @@ img.in-user-icon {
   position: fixed;
   margin-left: 1000px;
   height: 28px;
+  display: none;
 }
 
 .user-icon, .empty-heart,.compass {
